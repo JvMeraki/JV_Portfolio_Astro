@@ -7,8 +7,8 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://JvMeraki.github.io/JV_Portfolio_Astro/',
-  base: '/JV_Portfolio_Astro/',
+  site: 'https://jv-portfolio-astro.vercel.app',
+  base: '/',
 
   integrations: [
     svelte(),
