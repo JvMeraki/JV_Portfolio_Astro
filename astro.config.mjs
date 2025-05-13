@@ -5,6 +5,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://github.com/JvMeraki.github.io',
+  base: 'my-repo',
   integrations: [
     svelte(),
     tailwind()
