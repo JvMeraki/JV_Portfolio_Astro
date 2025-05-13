@@ -1,0 +1,135 @@
+---
+let showAll = false;
+const technologies = [
+  "astro",
+  "svelte",
+  "typeScript",
+  "tailwindcss",
+  "nodejs",
+  "python",
+  "HTML5",
+  "CSS3",
+  "javaScript",
+  "git",
+  "figma",
+  "mysql",
+];
+function capitalize(name: string) {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+---
+
+<section id="technologies" class="pb-12">
+  <div class="relative overflow-x-hidden py-8">
+    <h2
+      class="gradient-text text-center font-extrabold tracking-tight text-6xl text-[var(--white-icon)] my-15 pb-12"
+    >
+      Technologies
+    </h2>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
+    >
+    </div>
+
+    <div
+      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+    >
+      {
+        [...technologies, ...technologies, ...technologies].map((tech) => (
+          <div class="flex items-center gap-2 group transition-all duration-300">
+            <img
+              src={`/svg/${tech}.svg`}
+              alt={tech}
+              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+              width="30"
+              height="30"
+              loading="lazy"
+            />
+            <span class="text-lg font-medium text-[var(--white-icon)]">
+              {tech.charAt(0).toUpperCase() + tech.slice(1)}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="w-full flex justify-center mt-12">
+    <div
+      class="relative inline-flex overflow-hidden rounded-full p-[3px] transition-all duration-300 ease-in-out hover:scale-105"
+    >
+      <span
+        class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
+        bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--orange)_40%,transparent_100%)] group-hover:scale-125"
+      ></span>
+      <button
+        id="toggleBtn"
+        class="relative inline-flex w-40 h-10 items-center justify-center
+        rounded-full bg-[var(--background)] text-sm text-[var(--white-icon)] font-medium
+        z-10 hover:text-[var(--orange)]"
+      >
+        View all
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="toolList"
+    class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-2xl mx-auto px-4"
+  >
+    {
+      technologies.map((tech) => (
+        <div class="flex items-center gap-3">
+          <img
+            src={`/svg/${tech}.svg`}
+            alt={tech}
+            class="w-6 h-6 object-contain opacity-70"
+          />
+          <span class="text-[var(--white-icon)] text-lg font-medium">
+            {capitalize(tech)}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("toggleBtn");
+    const list = document.getElementById("toolList");
+
+    if (!button || !list) return;
+
+    let visible = false;
+
+    button.addEventListener("click", () => {
+      visible = !visible;
+      list.classList.toggle("hidden", !visible);
+      button.textContent = visible ? "Hide list" : "View all";
+    });
+  });
+</script>
+
+<style is:global>
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll {
+      animation-duration: 50s;
+    }
+  }
+</style>

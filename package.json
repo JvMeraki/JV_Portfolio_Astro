@@ -9,6 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.12"
+    "@astrojs/svelte": "^7.0.13",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.7.12",
+    "clsx": "^2.1.1",
+    "gsap": "^3.13.0",
+    "lucide-svelte": "^0.510.0",
+    "svelte-motion": "^0.12.2",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.6",
+    "@types/node": "^22.15.17",
+    "svelte": "^5.28.2",
+    "typescript": "^5.8.3"
   }
 }

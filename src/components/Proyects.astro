@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import ContentSection from "../components/Content-section.astro";
+import "../styles/global.css";
+
+const featuredSites = await getCollection(
+  "card",
+  ({ data }) => "featured" in data
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!
+);
+---
+
+<section class="pt-4">
+  <ContentSection title="Projects" id="projects">
+    <div slot="lead" class="text-gray-300 text-2xl mb-[-20px]">
+      These are some of the projects I have done, mixing <span
+        class="text-orange-500 breathe-effect">Astro</span
+      > with
+      <span class="text-orange-500 breathe-effect">Svelte</span>.
+    </div>
+    <div class="max-w-6xl">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {orderedSites.map((site) => <Card site={site} />)}
+      </div>
+      <p class="text-right text-2xl">
+        <a
+          class="text-primary text-gray-300"
+          href="https://github.com/JvMeraki"
+        >
+          ...and <span class="text-orange-500 breathe-effect">more</span> &rarr;
+        </a>
+      </p>
+    </div>
+  </ContentSection>
+</section>
