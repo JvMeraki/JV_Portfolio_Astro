@@ -15,8 +15,14 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1))(tailwindcss@3.4.17)
       '@astrojs/vercel':
-        specifier: ^8.1.4
+        specifier: ^8.0.4
         version: 8.1.4(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1))(rollup@4.40.2)(svelte@5.28.2)
+      '@fontsource/potta-one':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/rampart-one':
+        specifier: ^5.2.5
+        version: 5.2.5
       astro:
         specifier: ^5.7.12
         version: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.2)(typescript@5.8.3)(yaml@2.7.1)
@@ -273,6 +279,12 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/potta-one@5.2.5':
+    resolution: {integrity: sha512-i28B+09DTKyPj+ty+cyWyrWnK6oh7cyghShgGDhCVRC7nvqzz/unnnP8/AUcQPDI157t6Lx7ZQxTQSIhkESP2A==}
+
+  '@fontsource/rampart-one@5.2.5':
+    resolution: {integrity: sha512-LniF7Q+ydhKZ9DrqP8YtrCwsBjbrnGOEgIhHnpGMm+mFmFviBoojrND1xMZ2FwtjJLKRn8P9GU0VRKA7LLD2kg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2607,6 +2619,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.4':
     optional: true
+
+  '@fontsource/potta-one@5.2.5': {}
+
+  '@fontsource/rampart-one@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

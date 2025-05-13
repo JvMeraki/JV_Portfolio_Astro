@@ -31,6 +31,10 @@ export default {
           },
         },
       },
+      fontFamily: {
+        rampart: ['"Rampart One"', 'system-ui'],
+        potta: ['"Potta One"', 'system-ui'],
+      },
     },
   },
   plugins: [],

@@ -1,4 +1,6 @@
 <script>
+  import "@fontsource/potta-one";
+  import "@fontsource/rampart-one";
   import RetroGrid from "./RetroGrid.svelte";
 </script>
 
@@ -14,7 +16,7 @@
     Welcome to my portfolio
   </span> -->
   <span
-    class="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ff0000] via-[#ff6900] to-[#D1D2DB] bg-clip-text text-center text-7xl font-bold leading-normal tracking-tighter text-transparent"
+    class="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#B84E07] via-[#ff6900] to-[#BA4E00] bg-clip-text text-center text-7xl font-bold leading-normal tracking-tighter text-transparent font-rampart"
   >
     Welcome to my portfolio
   </span>

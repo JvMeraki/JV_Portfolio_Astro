@@ -11,7 +11,9 @@
   "dependencies": {
     "@astrojs/svelte": "^7.0.13",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.1.4",
+    "@astrojs/vercel": "^8.0.4",
+    "@fontsource/potta-one": "^5.2.5",
+    "@fontsource/rampart-one": "^5.2.5",
     "astro": "^5.7.12",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
