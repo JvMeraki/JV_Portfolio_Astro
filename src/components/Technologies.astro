@@ -20,41 +20,45 @@ function capitalize(name: string) {
 ---
 
 <section id="technologies" class="pb-12">
-  <div class="relative overflow-x-hidden py-8">
+  <div class="py-8">
     <h2
-      class="gradient-text text-center font-extrabold tracking-tight text-6xl text-[var(--white-icon)] my-15 pb-12"
+      class="gradient-text text-center font-extrabold tracking-tight
+         text-4xl sm:text-5xl md:text-6xl
+         text-[var(--white-icon)] my-15 pb-12"
     >
       Technologies
     </h2>
-    <div
-      class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
-    >
-    </div>
-    <div
-      class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
-    >
-    </div>
+    <div class="relative overflow-x-hidden">
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
+      >
+      </div>
 
-    <div
-      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
-    >
-      {
-        [...technologies, ...technologies, ...technologies].map((tech) => (
-          <div class="flex items-center gap-2 group transition-all duration-300">
-            <img
-              src={`/svg/${tech}.svg`}
-              alt={tech}
-              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
-              width="30"
-              height="30"
-              loading="lazy"
-            />
-            <span class="text-lg font-medium text-[var(--white-icon)]">
-              {tech.charAt(0).toUpperCase() + tech.slice(1)}
-            </span>
-          </div>
-        ))
-      }
+      <div
+        class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+      >
+        {
+          [...technologies, ...technologies, ...technologies].map((tech) => (
+            <div class="flex items-center gap-2 group transition-all duration-300">
+              <img
+                src={`/svg/${tech}.svg`}
+                alt={tech}
+                class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+                width="30"
+                height="30"
+                loading="lazy"
+              />
+              <span class="text-lg font-medium text-[var(--white-icon)]">
+                {tech.charAt(0).toUpperCase() + tech.slice(1)}
+              </span>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
   <div class="w-full flex justify-center mt-12">
@@ -76,9 +80,13 @@ function capitalize(name: string) {
     </div>
   </div>
 
-  <div
+  <!-- <div
     id="toolList"
     class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-2xl mx-auto px-4"
+  > -->
+  <div
+    id="toolList"
+    class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-xs mx-auto px-4"
   >
     {
       technologies.map((tech) => (
