@@ -41,12 +41,26 @@
     border-color: #ffffff10;
     border-radius: 9999px;
   }
+
+  @media (max-width: 767px) {
+    nav ul {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
   
-  /* nav a.active .nav-indicator {
-    transform: translateY(-50%) scale(1);
-    opacity: 1;
+    #nav-list {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }  
   }
-  */
+
   
   nav a.active {
     color: white !important;

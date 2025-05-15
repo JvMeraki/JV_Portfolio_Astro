@@ -25,18 +25,18 @@ const navItems: NavItem[] = [
       <button id="burger" class="md:hidden text-white" aria-label="Open menu">
         &#9776;
       </button>
+
       <ul
         id="nav-list"
-        class="hidden md:flex w-full justify-between md:space-x-6 md:justify-center md:gap-12 gap-6 absolute top-full left-0 md:static bg-[var(--background)] md:bg-transparent px-4 md:px-0 py-4 md:py-0"
+        class="hidden md:flex w-full justify-between md:space-x-6 md:justify-center md:gap-12 gap-6 absolute bottom-full left-0 md:static bg-[var(--background)] md:bg-transparent px-4 md:px-0 py-4 md:py-0"
       >
         {
           navItems.map((item) => (
-            <li class="flex-1 md:flex-none">
+            <li class="flex-1 md:flex-none bg-[var(--background)] md:bg-transparent px-4 md:px-0 py-4 md:py-0">
               <a
                 href={item.href}
                 class="flex flex-col items-center gap-1 text-[var(--white-icon)] transition-colors text-xs md:text-base relative group"
               >
-                <div class="absolute -left-6 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full transition-all duration-300 scale-0 opacity-0 bg-[#A9FF5B] nav-indicator hidden md:block" />
                 <span>{item.label}</span>
               </a>
             </li>
@@ -45,115 +45,120 @@ const navItems: NavItem[] = [
       </ul>
     </div>
   </nav>
-</div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.getElementById("main-nav") as HTMLElement | null;
-    const navList = document.getElementById("nav-list") as HTMLElement | null;
-    const burger = document.getElementById("burger") as HTMLElement | null;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.getElementById("main-nav") as HTMLElement | null;
+      const navList = document.getElementById("nav-list") as HTMLElement | null;
+      const burger = document.getElementById("burger") as HTMLElement | null;
 
-    const maxScroll = 1000;
-    let rafId: number | null = null;
-    let minWidth = 528;
+      const maxScroll = 1000;
+      let rafId: number | null = null;
+      let minWidth = 528;
 
-    burger?.addEventListener("click", () => {
-      navList?.classList.toggle("hidden");
-    });
-
-    function updateNav(): void {
-      if (!nav || !navList) return;
-
-      const contentWidth = navList.scrollWidth + 48;
-      minWidth = contentWidth;
-
-      const maxWidth = window.innerWidth * 0.8;
-
-      if (window.scrollY > 0) {
-        nav.classList.add("scrolling");
-
-        const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
-        const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
-
-        const currentWidth = Math.max(
-          minWidth + (maxWidth - minWidth) * (1 - easeProgress),
-          minWidth
-        );
-
-        if (window.innerWidth >= 768) {
-          nav.style.setProperty("width", `${currentWidth}px`);
-        }
-      } else {
-        nav.classList.remove("scrolling");
-        nav.style.setProperty("width", "80%");
-      }
-
-      rafId = null;
-    }
-
-    window.addEventListener("scroll", () => {
-      if (rafId === null) {
-        rafId = requestAnimationFrame(updateNav);
-      }
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e: Event) {
-        e.preventDefault();
-        const target = e.currentTarget as HTMLAnchorElement;
-        const targetId = target.getAttribute("href")?.substring(1) || "";
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-
-        if (window.innerWidth < 768 && navList) {
-          navList.classList.add("hidden");
-        }
+      burger?.addEventListener("click", () => {
+        navList?.classList.toggle("hidden");
       });
-    });
 
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("nav a[href^='#']");
+      function updateNav(): void {
+        if (!nav || !navList) return;
 
-    const observerOptions: IntersectionObserverInit = {
-      threshold: 0.15,
-      rootMargin: "-40% 0px -40% 0px",
-    };
+        const contentWidth = navList.scrollWidth + 48;
+        minWidth = contentWidth;
 
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
-            link.classList.remove("active", "text-[#FF6900]", "font-semibold");
-            link.classList.add("text-[var(--white-icon)]");
-          });
+        const maxWidth = window.innerWidth * 0.8;
 
-          const id = entry.target.getAttribute("id");
-          const activeLink = document.querySelector(
-            `nav a[href="#${id}"]`
-          ) as HTMLAnchorElement | null;
+        if (window.scrollY > 0) {
+          nav.classList.add("scrolling");
 
-          if (activeLink) {
-            activeLink.classList.add(
-              "active",
-              "text-[#FF6900]",
-              "font-semibold"
-            );
-            activeLink.classList.remove("text-[var(--white-icon)]");
+          const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
+          const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
+
+          const currentWidth = Math.max(
+            minWidth + (maxWidth - minWidth) * (1 - easeProgress),
+            minWidth
+          );
+
+          if (window.innerWidth >= 768) {
+            nav.style.setProperty("width", `${currentWidth}px`);
           }
+        } else {
+          nav.classList.remove("scrolling");
+          nav.style.setProperty("width", "80%");
+        }
+
+        rafId = null;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (rafId === null) {
+          rafId = requestAnimationFrame(updateNav);
         }
       });
-    };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
-    sections.forEach((section) => observer.observe(section));
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e: Event) {
+          e.preventDefault();
+          const target = e.currentTarget as HTMLAnchorElement;
+          const targetId = target.getAttribute("href")?.substring(1) || "";
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
 
-    if (navList) {
-      minWidth = navList.scrollWidth + 48;
-    }
-  });
-</script>
+          if (window.innerWidth < 768 && navList) {
+            navList.classList.add("hidden");
+          }
+        });
+      });
+
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a[href^='#']");
+      const isMobile = window.innerWidth < 768;
+
+      const observerOptions: IntersectionObserverInit = {
+        threshold: isMobile ? 0.05 : 0.15,
+        rootMargin: isMobile ? "-20% 0px -60% 0px" : "-40% 0px -40% 0px",
+      };
+
+      const observerCallback: IntersectionObserverCallback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => {
+              link.classList.remove(
+                "active",
+                "text-[#FF6900]",
+                "font-semibold"
+              );
+              link.classList.add("text-[var(--white-icon)]");
+            });
+
+            const id = entry.target.getAttribute("id");
+            const activeLink = document.querySelector(
+              `nav a[href="#${id}"]`
+            ) as HTMLAnchorElement | null;
+
+            if (activeLink) {
+              activeLink.classList.add(
+                "active",
+                "text-[#FF6900]",
+                "font-semibold"
+              );
+              activeLink.classList.remove("text-[var(--white-icon)]");
+            }
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        observerCallback,
+        observerOptions
+      );
+      sections.forEach((section) => observer.observe(section));
+
+      if (navList) {
+        minWidth = navList.scrollWidth + 48;
+      }
+    });
+  </script>
+</div>
