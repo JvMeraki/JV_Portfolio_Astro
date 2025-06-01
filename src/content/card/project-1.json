@@ -1,6 +1,6 @@
 {
-  "title": "Proyecto Ejemplo 1",
-  "image": "./_images/project-1.webp",
-  "url": "https://docs.astro.build/",
+  "title": "JV's Art Gallery",
+  "image": "./_images/jvs-art-gallery.webp",
+  "url": "https://jv-art-gallery.vercel.app/",
   "featured": 1
 }
