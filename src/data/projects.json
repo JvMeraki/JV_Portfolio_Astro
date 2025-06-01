@@ -10,29 +10,5 @@
         "image": "/_images/ice-cream-shop.webp",
         "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
         "featured": 2
-    },
-    {
-        "title": "Proyecto Ejemplo 3",
-        "image": "/_images/project-3.webp",
-        "url": "https://docs.astro.build/",
-        "featured": 3
-    },
-    {
-        "title": "Proyecto Ejemplo 4",
-        "image": "/_images/project-4.webp",
-        "url": "https://docs.astro.build/",
-        "featured": 4
-    },
-    {
-        "title": "Proyecto Ejemplo 5",
-        "image": "/_images/project-5.webp",
-        "url": "https://docs.astro.build/",
-        "featured": 5
-    },
-    {
-        "title": "Proyecto Ejemplo 6",
-        "image": "/_images/project-6.webp",
-        "url": "https://docs.astro.build/",
-        "featured": 6
     }
 ]
