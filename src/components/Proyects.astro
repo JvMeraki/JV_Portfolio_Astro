@@ -1,16 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
 import ContentSection from "../components/Content-section.astro";
+import projects from "../data/projects.json";
 import "../styles/global.css";
 
-const featuredSites = await getCollection(
-  "card",
-  ({ data }) => "featured" in data
-);
-const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!
-);
+const orderedProjects = projects.sort((a, b) => a.featured - b.featured);
 ---
 
 <section class="pt-4">
@@ -18,11 +12,12 @@ const orderedSites = featuredSites.sort(
     <div slot="lead" class="text-gray-300 text-2xl mb-[-20px]">
       These are some of the projects I have done, mixing <span
         class="text-[var(--sec)] shiny-sec">Astro</span
-      > with <span class="text-[var(--sec)] shiny-sec">Sveltekit</span>.
+      >
+      with <span class="text-[var(--sec)] shiny-sec">Sveltekit</span>.
     </div>
     <div class="max-w-6xl">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {orderedSites.map((site) => <Card site={site} />)}
+        {orderedProjects.map((project) => <Card project={project} />)}
       </div>
       <p class="text-right text-2xl">
         <a

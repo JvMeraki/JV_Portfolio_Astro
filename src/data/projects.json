@@ -1,0 +1,38 @@
+[
+    {
+        "title": "JV's Art Gallery",
+        "image": "/src/content/_images/jvs-art-gallery.webp",
+        "url": "https://jv-art-gallery.vercel.app/",
+        "featured": 1
+    },
+    {
+        "title": "Proyecto Ejemplo 2",
+        "image": "/src/content/_images/project-2.webp",
+        "url": "https://docs.astro.build/",
+        "featured": 2
+    },
+    {
+        "title": "Proyecto Ejemplo 3",
+        "image": "/src/content/_images/project-3.webp",
+        "url": "https://docs.astro.build/",
+        "featured": 3
+    },
+    {
+        "title": "Proyecto Ejemplo 4",
+        "image": "/src/content/_images/project-4.webp",
+        "url": "https://docs.astro.build/",
+        "featured": 4
+    },
+    {
+        "title": "Proyecto Ejemplo 5",
+        "image": "/src/content/_images/project-5.webp",
+        "url": "https://docs.astro.build/",
+        "featured": 5
+    },
+    {
+        "title": "Proyecto Ejemplo 6",
+        "image": "/src/content/_images/project-6.webp",
+        "url": "https://docs.astro.build/",
+        "featured": 6
+    }
+]
