@@ -3,12 +3,16 @@
         "title": "JV's Art Gallery",
         "image": "/_images/jvs-art-gallery.webp",
         "url": "https://jv-art-gallery.vercel.app/",
-        "featured": 1
+        "featured": 1,
+        "description": "An online gallery that displays portraits made using differents techniques",
+        "technologies": ["astro", "tailwindcss"]
     },
     {
         "title": "Ice Cream Shop - Project",
         "image": "/_images/ice-cream-shop.webp",
         "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
-        "featured": 2
+        "featured": 2,
+        "description": "An online Ice cream shop project with its own API, database authentication, and inventory management",
+        "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
     }
 ]

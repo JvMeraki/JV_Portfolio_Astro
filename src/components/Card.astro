@@ -5,35 +5,64 @@ export interface Props {
     url: string;
     image: string;
     featured: number;
+    description?: string;
+    technologies?: string[];
   };
 }
 
 const { project } = Astro.props;
 ---
 
-<a
-  class="group aspect-video hover:!text-default"
-  href={project.url}
-  target="_blank"
+<article
+  class="w-full max-w-sm overflow-hidden text-white hover:shadow-xl transition-shadow duration-300 bg-white/5 rounded-2xl"
 >
-  <figure class="relative h-full w-full overflow-hidden rounded-lg">
-    <img
-      class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-40 group-focus:scale-110 group-focus:opacity-20"
-      src={project.image}
-      alt={`Screenshot of ${project.title}`}
-      loading="lazy"
-    />
-    <figcaption class="absolute inset-0">
-      <div
-        class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100"
+  <img
+    class="w-full h-48 object-cover"
+    src={project.image}
+    alt={`Screenshot of ${project.title}`}
+    loading="lazy"
+  />
+  <div class="p-4 flex flex-col gap-3">
+    <h3
+      class="text-lg md:text-xl font-bold uppercase break-words leading-tight"
+    >
+      {project.title}
+    </h3>
+    {
+      project.description && (
+        <p class="text-sm text-gray-300 leading-snug">{project.description}</p>
+      )
+    }
+    {
+      project.technologies && (
+        <div class="flex flex-wrap items-center gap-2">
+          {project.technologies.map((tech) => (
+            <img
+              src={`/svg/${tech}.svg`}
+              alt={tech}
+              title={tech}
+              class="h-5 w-5 sm:h-6 sm:w-6"
+            />
+          ))}
+        </div>
+      )
+    }
+    <div
+      class="relative inline-flex overflow-hidden rounded-full p-[3px] transition-all duration-300 ease-in-out hover:scale-105"
+    >
+      <span
+        class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
+    bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--orange)_40%,transparent_100%)] group-hover:scale-125"
+      ></span>
+      <a
+        href={project.url}
+        target="_blank"
+        class="relative inline-flex w-full h-10 items-center justify-center
+    rounded-full bg-[var(--background)] text-sm text-[var(--white-icon)] font-medium
+    z-10 hover:text-[var(--orange)] text-center"
       >
-        <h3 class="text-center font-extrabold uppercase text-xl text-white">
-          {project.title}
-        </h3>
-        <p class="border border-current px-4 py-2 border-gray-300 text-white">
-          <span class="text-gray-300">{project.url}</span>
-        </p>
-      </div>
-    </figcaption>
-  </figure>
-</a>
+        View project
+      </a>
+    </div>
+  </div>
+</article>
