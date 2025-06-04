@@ -5,7 +5,7 @@
         "url": "https://jv-art-gallery.vercel.app/",
         "featured": 1,
         "description": "An online gallery that displays portraits made using differents techniques",
-        "technologies": ["astro", "tailwindcss"]
+        "technologies": ["astro", "tailwindcss", "react"]
     },
     {
         "title": "Ice Cream Shop - Project",
