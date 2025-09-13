@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { cn } from "@/lib/utils";
   import { Github, Instagram, Linkedin } from "lucide-svelte";
   import { Motion, useMotionValue } from "svelte-motion";
-  import { cn } from "../lib/utils";
   import DockItem from "./DockItem.svelte";
 
   type DockItem = {

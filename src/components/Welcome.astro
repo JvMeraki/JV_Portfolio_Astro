@@ -1,14 +1,18 @@
 ---
-import "../styles/global.css";
-import RetroGrid from "../svelte/RetroGridLayout.svelte";
+import RetroGrid from "@/components/svelte/RetroGridLayout.svelte";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import "@/styles/global.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="home" class="mt-12 md:mt-0">
   <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
-    <RetroGrid />
+    <RetroGrid client:visible lang={lang} />
     <div class="text-left space-y-4">
       <p class="text-md md:text-2xl text-[var(--gray)]">
-        Hi, I'm Javier Martinez 🩶
+        {t("hero_hello")}
       </p>
       <div
         class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 md:gap-4"
@@ -16,15 +20,15 @@ import RetroGrid from "../svelte/RetroGridLayout.svelte";
         <h1
           class="text-[var(--white-icon)] text-5xl md:text-6xl font-medium text-pretty leading-none"
         >
-          Web <br /> Developer
+          {t("hero_role1")}<br />{t("hero_role2")}
         </h1>
         <p class="text-md md:text-2xl text-[var(--gray)] lg:pl-10">
-          Qualified, organized, and detail-oriented Web Developer with
-          experience in designing and building PWA and SPA websites using modern
-          frameworks such as <span class="text-[var(--sec)] shiny-sec"
-            >Astro</span
-          > and <span class="text-[var(--sec)] shiny-sec">Sveltekit</span>.
-          Proficient in Figma forcreating user-centered UX/UI designs.
+          {t("hero_text1")}
+          <span class="text-[var(--sec)] shiny-sec">{t("hero_text_tech1")}</span
+          >
+          {t("hero_text_union")}
+          <span class="text-[var(--sec)] shiny-sec">{t("hero_text_tech2")}</span
+          >. {t("hero_text2")}
         </p>
       </div>
     </div>

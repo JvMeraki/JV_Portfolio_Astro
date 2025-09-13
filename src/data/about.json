@@ -1,0 +1,128 @@
+{
+  "en": [
+    {
+      "title": "Who am I?",
+      "description": "My name is Brayan Javier Martínez Pinzón, a 26-year-old self-taught developer from Colombia 🇨🇴.",
+      "enphasis": "Brayan Javier Martínez Pinzón"
+    },
+    {
+      "title": "Creative Side",
+      "description": "I’m passionate about visual expression. Drawing has been a long-time companion, and it constantly influences how I approach UI/UX and front-end design with a creative lens.",
+      "enphasis": "Drawing"
+    },
+    {
+      "title": "Experience",
+      "description": "I’ve been working in RPA development for over 3 years. While automation sharpened my logic and process design skills, I’m now fully focused on web development, where I aim to merge technical knowledge with strong design sensibility.",
+      "enphasis": "RPA development"
+    },
+    {
+      "title": "Languages & Interests",
+      "description": "I enjoy languages and culture. I speak some English, Italian, Portuguese, and French, and I’m currently learning Korean 🇰🇷. K-dramas and K-pop are part of my daily routine, and they help me relax and stay inspired."
+    }
+  ],
+  "es": [
+    {
+      "title": "¿Quién soy?",
+      "description": "Me llamo Brayan Javier Martínez Pinzón, un desarrollador autodidacta de 26 años de Colombia 🇨🇴.",
+      "enphasis": "Brayan Javier Martínez Pinzón"
+    },
+    {
+      "title": "Lado creativo",
+      "description": "Me apasiona la expresión visual. El dibujo ha sido un compañero constante y siempre influye en cómo abordo el diseño UI/UX y el frontend con una mirada creativa.",
+      "enphasis": "Dibujo"
+    },
+    {
+      "title": "Experiencia",
+      "description": "He trabajado en desarrollo RPA por más de 3 años. Aunque la automatización fortaleció mi lógica y diseño de procesos, ahora estoy plenamente enfocado en desarrollo web, donde busco combinar conocimiento técnico con sensibilidad en el diseño.",
+      "enphasis": "Desarrollo RPA"
+    },
+    {
+      "title": "Idiomas e intereses",
+      "description": "Disfruto de los idiomas y la cultura. Hablo algo de inglés, italiano, portugués y francés, y actualmente estoy aprendiendo coreano 🇰🇷. Los K-dramas y el K-pop son parte de mi rutina diaria y me ayudan a relajarme e inspirarme."
+    }
+  ],
+  "fr": [
+    {
+      "title": "Qui suis-je ?",
+      "description": "Je m'appelle Brayan Javier Martínez Pinzón, un développeur autodidacte de 26 ans originaire de Colombie 🇨🇴.",
+      "enphasis": "Brayan Javier Martínez Pinzón"
+    },
+    {
+      "title": "Côté créatif",
+      "description": "Je suis passionné par l'expression visuelle. Le dessin a toujours été un compagnon fidèle et influence constamment ma manière d'aborder le design UI/UX et le développement frontend avec un regard créatif.",
+      "enphasis": "Dessin"
+    },
+    {
+      "title": "Expérience",
+      "description": "J'ai travaillé dans le développement RPA pendant plus de 3 ans. Bien que l'automatisation ait affiné ma logique et mes compétences en conception de processus, je me concentre désormais pleinement sur le développement web, où je cherche à allier savoir-faire technique et sensibilité au design.",
+      "enphasis": "Développement RPA"
+    },
+    {
+      "title": "Langues et centres d'intérêt",
+      "description": "J’aime les langues et la culture. Je parle un peu anglais, italien, portugais et français, et j'apprends actuellement le coréen 🇰🇷. Les K-dramas et la K-pop font partie de ma routine quotidienne et m’aident à me détendre et à rester inspiré."
+    }
+  ],
+  "it": [
+    {
+      "title": "Chi sono?",
+      "description": "Mi chiamo Brayan Javier Martínez Pinzón, uno sviluppatore autodidatta di 26 anni proveniente dalla Colombia 🇨🇴.",
+      "enphasis": "Brayan Javier Martínez Pinzón"
+    },
+    {
+      "title": "Lato creativo",
+      "description": "Sono appassionato di espressione visiva. Il disegno è stato un compagno costante e influenza continuamente il mio approccio al design UI/UX e allo sviluppo frontend con una prospettiva creativa.",
+      "enphasis": "Disegno"
+    },
+    {
+      "title": "Esperienza",
+      "description": "Ho lavorato nello sviluppo RPA per oltre 3 anni. Sebbene l'automazione abbia affinato la mia logica e le mie capacità di progettazione dei processi, ora mi concentro completamente sullo sviluppo web, dove miro a unire conoscenze tecniche e sensibilità al design.",
+      "enphasis": "Sviluppo RPA"
+    },
+    {
+      "title": "Lingue e interessi",
+      "description": "Mi piacciono le lingue e la cultura. Parlo un po' di inglese, italiano, portoghese e francese, e attualmente sto studiando coreano 🇰🇷. I K-drama e il K-pop fanno parte della mia routine quotidiana e mi aiutano a rilassarmi e a restare ispirato."
+    }
+  ],
+  "pt": [
+    {
+      "title": "Quem sou eu?",
+      "description": "Meu nome é Brayan Javier Martínez Pinzón, um desenvolvedor autodidata de 26 anos da Colômbia 🇨🇴.",
+      "enphasis": "Brayan Javier Martínez Pinzón"
+    },
+    {
+      "title": "Lado criativo",
+      "description": "Sou apaixonado por expressão visual. O desenho sempre foi um companheiro constante e influencia continuamente minha abordagem ao design de UI/UX e ao desenvolvimento frontend com uma visão criativa.",
+      "enphasis": "Desenho"
+    },
+    {
+      "title": "Experiência",
+      "description": "Trabalhei com desenvolvimento RPA por mais de 3 anos. Embora a automação tenha aprimorado minha lógica e habilidades de design de processos, agora estou totalmente focado em desenvolvimento web, onde procuro unir conhecimento técnico com sensibilidade de design.",
+      "enphasis": "Desenvolvimento RPA"
+    },
+    {
+      "title": "Idiomas e interesses",
+      "description": "Gosto de idiomas e cultura. Falo um pouco de inglês, italiano, português e francês, e atualmente estou aprendendo coreano 🇰🇷. K-dramas e K-pop fazem parte da minha rotina diária e me ajudam a relaxar e me manter inspirado."
+    }
+  ],
+  "kr": [
+    {
+      "title": "나는 누구인가?",
+      "description": "저는 콜롬비아 🇨🇴 출신의 26세 독학 개발자 브라얀 하비에르 마르티네스 핀손입니다.",
+      "enphasis": "브라얀 하비에르 마르티네스 핀손"
+    },
+    {
+      "title": "창의적인 면",
+      "description": "저는 시각적 표현에 열정적입니다. 그림은 오랫동안 저의 동반자였으며, UI/UX 및 프론트엔드 디자인에 창의적인 시각으로 접근하는 데 지속적으로 영향을 주고 있습니다.",
+      "enphasis": "그림"
+    },
+    {
+      "title": "경험",
+      "description": "저는 3년 이상 RPA 개발 분야에서 일했습니다. 자동화는 저의 논리와 프로세스 설계 능력을 향상시켰고, 이제는 기술 지식과 디자인 감각을 결합하는 웹 개발에 전념하고 있습니다.",
+      "enphasis": "RPA 개발"
+    },
+    {
+      "title": "언어 및 관심사",
+      "description": "저는 언어와 문화를 즐깁니다. 영어, 이탈리아어, 포르투갈어, 프랑스어를 조금 할 수 있고 현재 한국어 🇰🇷를 배우고 있습니다. K-드라마와 K-팝은 제 일상에서 중요한 부분이며 저를 편안하게 하고 영감을 줍니다."
+    }
+  ]
+}

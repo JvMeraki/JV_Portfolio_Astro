@@ -1,0 +1,248 @@
+{
+  "en": [
+    {
+      "role": "Software Developer",
+      "entity": "Inetum",
+      "date": "July 2025 - Present",
+      "tasks": [
+        "Creating web interfaces by combining technologies such as Astro, Svelte, and React as needed.",
+        "Communicate frontend with Python backend environments.",
+        "Documenting development processes."
+      ]
+    },
+    {
+      "role": "Web Developer",
+      "entity": "Freelance",
+      "date": "April 2025 - June 2025",
+      "tasks": [
+        "Efficient interfaces with Astro and SvelteKit.",
+        "Backend with Node.js, Python, and SQL.",
+        "Documenting development processes."
+      ]
+    },
+    {
+      "role": "RPA Developer",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "November 2021 - March 2025",
+      "tasks": [
+        "Automate and optimize processes through robotics.",
+        "Identify, estimate, develop, and maintain low-code automation processes to meet specific needs.",
+        "Implementation of low-code, rule-based, robust applications with outsourced data."
+      ]
+    },
+    {
+      "role": "Technology apprentice",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "July 2017 - January 2018",
+      "tasks": [
+        "On-site technical support and incident resolution.",
+        "Daily backup management."
+      ]
+    }
+  ],
+  "es": [
+    {
+      "role": "Desarrollador de Software",
+      "entity": "Inetum",
+      "date": "Julio 2025 - Presente",
+      "tasks": [
+        "Creación de interfaces web combinando tecnologías como Astro, Svelte y React según sea necesario.",
+        "Comunicar el frontend con entornos backend en Python.",
+        "Documentación de procesos de desarrollo."
+      ]
+    },
+    {
+      "role": "Desarrollador Web",
+      "entity": "Freelance",
+      "date": "Abril 2025 - Junio 2025",
+      "tasks": [
+        "Interfaces eficientes con Astro y SvelteKit.",
+        "Backend con Node.js, Python y SQL.",
+        "Documentación de procesos de desarrollo."
+      ]
+    },
+    {
+      "role": "Desarrollador RPA",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "Noviembre 2021 - Marzo 2025",
+      "tasks": [
+        "Automatizar y optimizar procesos mediante robótica.",
+        "Identificar, estimar, desarrollar y mantener procesos de automatización low-code para satisfacer necesidades específicas.",
+        "Implementación de aplicaciones low-code, basadas en reglas, robustas y con datos externos."
+      ]
+    },
+    {
+      "role": "Aprendiz en Tecnología",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "Julio 2017 - Enero 2018",
+      "tasks": [
+        "Soporte técnico en sitio y resolución de incidentes.",
+        "Gestión diaria de respaldos."
+      ]
+    }
+  ],
+  "fr": [
+    {
+      "role": "Développeur logiciel",
+      "entity": "Inetum",
+      "date": "Juillet 2025 - Présent",
+      "tasks": [
+        "Création d'interfaces web en combinant des technologies telles qu'Astro, Svelte et React selon les besoins.",
+        "Communication du frontend avec des environnements backend Python.",
+        "Documentation des processus de développement."
+      ]
+    },
+    {
+      "role": "Développeur web",
+      "entity": "Freelance",
+      "date": "Avril 2025 - Juin 2025",
+      "tasks": [
+        "Interfaces efficaces avec Astro et SvelteKit.",
+        "Backend avec Node.js, Python et SQL.",
+        "Documentation des processus de développement."
+      ]
+    },
+    {
+      "role": "Développeur RPA",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "Novembre 2021 - Mars 2025",
+      "tasks": [
+        "Automatiser et optimiser les processus grâce à la robotique.",
+        "Identifier, estimer, développer et maintenir des processus d'automatisation low-code adaptés aux besoins spécifiques.",
+        "Mise en œuvre d'applications low-code, basées sur des règles, robustes et utilisant des données externes."
+      ]
+    },
+    {
+      "role": "Apprenti en technologie",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "Juillet 2017 - Janvier 2018",
+      "tasks": [
+        "Support technique sur site et résolution des incidents.",
+        "Gestion quotidienne des sauvegardes."
+      ]
+    }
+  ],
+  "it": [
+    {
+      "role": "Sviluppatore Software",
+      "entity": "Inetum",
+      "date": "Luglio 2025 - Presente",
+      "tasks": [
+        "Creazione di interfacce web combinando tecnologie come Astro, Svelte e React secondo le necessità.",
+        "Comunicare il frontend con ambienti backend in Python.",
+        "Documentazione dei processi di sviluppo."
+      ]
+    },
+    {
+      "role": "Sviluppatore Web",
+      "entity": "Freelance",
+      "date": "Aprile 2025 - Giugno 2025",
+      "tasks": [
+        "Interfacce efficienti con Astro e SvelteKit.",
+        "Backend con Node.js, Python e SQL.",
+        "Documentazione dei processi di sviluppo."
+      ]
+    },
+    {
+      "role": "Sviluppatore RPA",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "Novembre 2021 - Marzo 2025",
+      "tasks": [
+        "Automatizzare e ottimizzare i processi tramite la robotica.",
+        "Identificare, stimare, sviluppare e mantenere processi di automazione low-code per soddisfare esigenze specifiche.",
+        "Implementazione di applicazioni low-code, basate su regole, robuste e con dati esterni."
+      ]
+    },
+    {
+      "role": "Apprendista Tecnologico",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "Luglio 2017 - Gennaio 2018",
+      "tasks": [
+        "Supporto tecnico in loco e risoluzione degli incidenti.",
+        "Gestione quotidiana dei backup."
+      ]
+    }
+  ],
+  "pt": [
+    {
+      "role": "Desenvolvedor de Software",
+      "entity": "Inetum",
+      "date": "Julho 2025 - Presente",
+      "tasks": [
+        "Criação de interfaces web combinando tecnologias como Astro, Svelte e React conforme necessário.",
+        "Comunicar o frontend com ambientes backend em Python.",
+        "Documentação dos processos de desenvolvimento."
+      ]
+    },
+    {
+      "role": "Desenvolvedor Web",
+      "entity": "Freelance",
+      "date": "Abril 2025 - Junho 2025",
+      "tasks": [
+        "Interfaces eficientes com Astro e SvelteKit.",
+        "Backend com Node.js, Python e SQL.",
+        "Documentação dos processos de desenvolvimento."
+      ]
+    },
+    {
+      "role": "Desenvolvedor RPA",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "Novembro 2021 - Março 2025",
+      "tasks": [
+        "Automatizar e otimizar processos através da robótica.",
+        "Identificar, estimar, desenvolver e manter processos de automação low-code para atender necessidades específicas.",
+        "Implementação de aplicações low-code, baseadas em regras, robustas e com dados externos."
+      ]
+    },
+    {
+      "role": "Aprendiz em Tecnologia",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "Julho 2017 - Janeiro 2018",
+      "tasks": [
+        "Suporte técnico presencial e resolução de incidentes.",
+        "Gestão diária de backups."
+      ]
+    }
+  ],
+  "kr": [
+    {
+      "role": "소프트웨어 개발자",
+      "entity": "Inetum",
+      "date": "2025년 7월 - 현재",
+      "tasks": [
+        "필요에 따라 Astro, Svelte, React와 같은 기술을 결합하여 웹 인터페이스를 생성.",
+        "프론트엔드를 Python 백엔드 환경과 연결.",
+        "개발 프로세스 문서화."
+      ]
+    },
+    {
+      "role": "웹 개발자",
+      "entity": "프리랜서",
+      "date": "2025년 4월 - 2025년 6월",
+      "tasks": [
+        "Astro와 SvelteKit으로 효율적인 인터페이스 개발.",
+        "Node.js, Python, SQL을 사용한 백엔드 개발.",
+        "개발 프로세스 문서화."
+      ]
+    },
+    {
+      "role": "RPA 개발자",
+      "entity": "KPMG Advisory, Tax & Legal",
+      "date": "2021년 11월 - 2025년 3월",
+      "tasks": [
+        "로보틱스를 통해 프로세스 자동화 및 최적화.",
+        "특정 요구를 충족하기 위해 로우코드 자동화 프로세스를 식별, 추정, 개발 및 유지.",
+        "외부 데이터를 사용하는 규칙 기반의 강력한 로우코드 애플리케이션 구현."
+      ]
+    },
+    {
+      "role": "기술 연수생",
+      "entity": "Carvajal Soluciones de Comunicación",
+      "date": "2017년 7월 - 2018년 1월",
+      "tasks": [
+        "현장 기술 지원 및 사고 해결.",
+        "일일 백업 관리."
+      ]
+    }
+  ]
+}

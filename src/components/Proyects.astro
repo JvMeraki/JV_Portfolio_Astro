@@ -1,32 +1,41 @@
 ---
-import Card from "../components/Card.astro";
-import ContentSection from "../components/Content-section.astro";
-import projects from "../data/projects.json";
-import "../styles/global.css";
+import Card from "@/components/CardProject.astro";
+import ContentSection from "@/components/Content-section.astro";
+import projectsData from "@/data/projects.json";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import "@/styles/global.css";
 
-const orderedProjects = projects.sort((a, b) => a.featured - b.featured);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = projectsData[lang];
 ---
 
 <section class="pt-4">
-  <ContentSection title="Projects" id="projects">
+  <ContentSection title={t("content_projects_title")} id="projects">
     <div slot="lead" class="text-gray-300 text-2xl mb-[-20px]">
-      These are some of the projects I have done, mixing <span
-        class="text-[var(--sec)] shiny-sec">different technologies</span
-      >.
+      {t("content_projects_text")}
+      <span class="text-[var(--sec)] shiny-sec">
+        {t("content_projects_techs")}
+      </span>.
     </div>
     <div class="max-w-full">
       <div
         class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 auto-rows-fr"
       >
-        {orderedProjects.map((project) => <Card project={project} />)}
+        {projects.map((project) => <Card project={project} />)}
       </div>
       <p class="text-right text-2xl">
         <a
           class="text-primary text-gray-300"
           href="https://github.com/JvMeraki"
         >
-          ...and <span class="text-[var(--sec)] shiny-sec">more</span>.
-        </a> &rarr;
+          {t("content_projects_complement1")}
+          <span class="text-[var(--sec)] shiny-sec">
+            {t("content_projects_complement2")}
+          </span>.
+          <span class="text-gray-300"> &rarr; </span>
+        </a>
       </p>
     </div>
   </ContentSection>

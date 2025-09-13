@@ -1,17 +1,23 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import type { UIDictionaryKeys } from "@/i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface NavItem {
-  label: string;
+  label: UIDictionaryKeys;
   href: string;
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About me", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Technologies", href: "#technologies" },
-  { label: "Drawing gallery", href: "#gallery" },
+  { label: "nav_home", href: "#home" },
+  { label: "nav_about", href: "#about" },
+  { label: "nav_projects", href: "#projects" },
+  { label: "nav_techs", href: "#technologies" },
+  { label: "nav_gallery", href: "#gallery" },
   // { label: "Contact", href: "#contact" },
 ];
 ---
@@ -37,11 +43,16 @@ const navItems: NavItem[] = [
                 href={item.href}
                 class="flex flex-col items-center gap-1 text-[var(--white-icon)] transition-colors text-xs md:text-base relative group"
               >
-                <span>{item.label}</span>
+                <span>{t(item.label)}</span>
               </a>
             </li>
           ))
         }
+        <li
+          class="flex-1 md:flex-none bg-[var(--background)] md:bg-transparent px-4 md:px-0 py-4 md:py-0"
+        >
+          <LanguagePicker client:visible />
+        </li>
       </ul>
     </div>
   </nav>

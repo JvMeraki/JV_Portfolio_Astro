@@ -1,0 +1,32 @@
+---
+export interface Props {
+  type: {
+    role?: string;
+    title?: string;
+    entity: string;
+    date: string;
+    tasks?: string[];
+  };
+}
+
+const { type } = Astro.props;
+---
+
+<div
+  class="bg-white/5 rounded-xl p-5 border border-white/10 backdrop-blur-lg shadow-sm hover:shadow-[0_0_15px_2px_var(--orange)] transition duration-300 ease-in-out"
+>
+  <p class="text-xl text-[var(--white-icon)] font-semibold">
+    {type.role || type.title}
+  </p>
+  <p class="text-lg text-[var(--gray)]">{type.entity}</p>
+  <p class="text-sm text-[var(--sec)]">{type.date}</p>
+  {
+    type.tasks && (
+      <ul class="list-disc ml-5 mt-2 space-y-1 text-[var(--gray)] text-base leading-relaxed">
+        {type.tasks.map((task) => (
+          <li>{task}</li>
+        ))}
+      </ul>
+    )
+  }
+</div>

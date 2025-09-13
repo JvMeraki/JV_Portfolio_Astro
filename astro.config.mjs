@@ -9,11 +9,13 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://jv-portfolio-astro.vercel.app',
   base: '/',
-
   integrations: [
     svelte(),
     tailwind()
   ],
-
   adapter: vercel(),
+  i18n: {
+    locales: ["es", "en", "fr", "it", "pt", "kr"],
+    defaultLocale: "en",
+  }
 });

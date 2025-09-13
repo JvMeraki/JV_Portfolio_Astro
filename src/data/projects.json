@@ -1,18 +1,110 @@
-[
+{
+  "en": [
     {
-        "title": "JV's Art Gallery",
-        "image": "/_images/jvs-art-gallery.webp",
-        "url": "https://jv-art-gallery.vercel.app/",
-        "featured": 1,
-        "description": "An online gallery that displays portraits made using differents techniques",
-        "technologies": ["astro", "tailwindcss", "react"]
+      "title": "JV's Art Gallery",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "An online gallery that displays portraits made using different techniques",
+      "technologies": ["astro", "tailwindcss", "react"]
     },
     {
-        "title": "Ice Cream Shop - Project",
-        "image": "/_images/ice-cream-shop.webp",
-        "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
-        "featured": 2,
-        "description": "An online Ice cream shop project with its own API, database authentication, and inventory management",
-        "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+      "title": "Ice Cream Shop - Project",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "An online ice cream shop project with its own API, database authentication, and inventory management",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
     }
-]
+  ],
+  "es": [
+    {
+      "title": "Galería de Arte de JV",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "Una galería en línea que muestra retratos realizados con diferentes técnicas",
+      "technologies": ["astro", "tailwindcss", "react"]
+    },
+    {
+      "title": "Heladería - Proyecto",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "Un proyecto de heladería en línea con su propia API, autenticación de base de datos y gestión de inventario",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+    }
+  ],
+  "fr": [
+    {
+      "title": "Galerie d'Art de JV",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "Une galerie en ligne qui présente des portraits réalisés avec différentes techniques",
+      "technologies": ["astro", "tailwindcss", "react"]
+    },
+    {
+      "title": "Glacier - Projet",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "Un projet de glacier en ligne avec sa propre API, authentification de base de données et gestion des stocks",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+    }
+  ],
+  "it": [
+    {
+      "title": "Galleria d'Arte di JV",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "Una galleria online che mostra ritratti realizzati con diverse tecniche",
+      "technologies": ["astro", "tailwindcss", "react"]
+    },
+    {
+      "title": "Gelateria - Progetto",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "Un progetto di gelateria online con la propria API, autenticazione del database e gestione dell'inventario",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+    }
+  ],
+  "pt": [
+    {
+      "title": "Galeria de Arte do JV",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "Uma galeria online que exibe retratos feitos com diferentes técnicas",
+      "technologies": ["astro", "tailwindcss", "react"]
+    },
+    {
+      "title": "Sorveteria - Projeto",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "Um projeto de sorveteria online com sua própria API, autenticação de banco de dados e gerenciamento de estoque",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+    }
+  ],
+  "kr": [
+    {
+      "title": "JV의 아트 갤러리",
+      "image": "/_images/jvs-art-gallery.webp",
+      "url": "https://jv-art-gallery.vercel.app/",
+      "featured": 1,
+      "description": "다양한 기법으로 제작된 초상화를 전시하는 온라인 갤러리",
+      "technologies": ["astro", "tailwindcss", "react"]
+    },
+    {
+      "title": "아이스크림 가게 - 프로젝트",
+      "image": "/_images/ice-cream-shop.webp",
+      "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp",
+      "featured": 2,
+      "description": "자체 API, 데이터베이스 인증 및 재고 관리를 갖춘 온라인 아이스크림 가게 프로젝트",
+      "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+    }
+  ]
+}

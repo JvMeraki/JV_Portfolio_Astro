@@ -1,0 +1,134 @@
+{
+  "en": [
+    {
+      "entity": "Manuela Beltrán University",
+      "date": "2023 - Present",
+      "title": "Software Engineering"
+    },
+    {
+      "entity": "Los Andes University",
+      "date": "2025",
+      "title": "Backend with Python Diploma"
+    },
+    {
+      "entity": "Francisco José de Caldas District University",
+      "date": "2023",
+      "title": "Intermediate Full Stack Development Diploma"
+    },
+    {
+      "entity": "Technological University of Pereira",
+      "date": "2021",
+      "title": "Web Application Development Diploma"
+    }
+  ],
+  "es": [
+    {
+      "entity": "Universidad Manuela Beltrán",
+      "date": "2023 - Presente",
+      "title": "Ingeniería de Software"
+    },
+    {
+      "entity": "Universidad de los Andes",
+      "date": "2025",
+      "title": "Diplomado en Backend con Python"
+    },
+    {
+      "entity": "Universidad Distrital Francisco José de Caldas",
+      "date": "2023",
+      "title": "Diplomado en Desarrollo Full Stack Intermedio"
+    },
+    {
+      "entity": "Universidad Tecnológica de Pereira",
+      "date": "2021",
+      "title": "Diplomado en Desarrollo de Aplicaciones Web"
+    }
+  ],
+  "fr": [
+    {
+      "entity": "Université Manuela Beltrán",
+      "date": "2023 - Présent",
+      "title": "Génie logiciel"
+    },
+    {
+      "entity": "Université des Andes",
+      "date": "2025",
+      "title": "Diplôme en Backend avec Python"
+    },
+    {
+      "entity": "Université Francisco José de Caldas",
+      "date": "2023",
+      "title": "Diplôme en Développement Full Stack Intermédiaire"
+    },
+    {
+      "entity": "Université Technologique de Pereira",
+      "date": "2021",
+      "title": "Diplôme en Développement d’Applications Web"
+    }
+  ],
+  "it": [
+    {
+      "entity": "Università Manuela Beltrán",
+      "date": "2023 - Presente",
+      "title": "Ingegneria del Software"
+    },
+    {
+      "entity": "Università de Los Andes",
+      "date": "2025",
+      "title": "Diploma in Backend con Python"
+    },
+    {
+      "entity": "Università Francisco José de Caldas",
+      "date": "2023",
+      "title": "Diploma in Sviluppo Full Stack Intermedio"
+    },
+    {
+      "entity": "Università Tecnologica di Pereira",
+      "date": "2021",
+      "title": "Diploma in Sviluppo di Applicazioni Web"
+    }
+  ],
+  "pt": [
+    {
+      "entity": "Universidade Manuela Beltrán",
+      "date": "2023 - Presente",
+      "title": "Engenharia de Software"
+    },
+    {
+      "entity": "Universidade dos Andes",
+      "date": "2025",
+      "title": "Diploma em Backend com Python"
+    },
+    {
+      "entity": "Universidade Distrital Francisco José de Caldas",
+      "date": "2023",
+      "title": "Diploma em Desenvolvimento Full Stack Intermediário"
+    },
+    {
+      "entity": "Universidade Tecnológica de Pereira",
+      "date": "2021",
+      "title": "Diploma em Desenvolvimento de Aplicações Web"
+    }
+  ],
+  "kr": [
+    {
+      "entity": "마누엘라 벨트란 대학교",
+      "date": "2023 - 현재",
+      "title": "소프트웨어 공학"
+    },
+    {
+      "entity": "로스 안데스 대학교",
+      "date": "2025",
+      "title": "Python 백엔드 디플로마"
+    },
+    {
+      "entity": "프란시스코 호세 데 칼다스 국립 대학교",
+      "date": "2023",
+      "title": "중급 풀스택 개발 디플로마"
+    },
+    {
+      "entity": "페레이라 공과대학교",
+      "date": "2021",
+      "title": "웹 애플리케이션 개발 디플로마"
+    }
+  ]
+}

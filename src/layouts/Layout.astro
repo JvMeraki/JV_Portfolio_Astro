@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css";
+import { getLangFromUrl } from "@/i18n/utils";
+import "@/styles/global.css";
 
 interface Props {
   title: string;
@@ -9,10 +10,11 @@ const { title } = Astro.props;
 const { site } = Astro;
 const url = new URL(Astro.request.url);
 const fullUrl = `${site}${url.pathname}`;
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Software Developer" />
