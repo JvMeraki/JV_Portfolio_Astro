@@ -12,7 +12,7 @@ const t = useTranslations(lang);
       <div class="flex flex-col items-center space-y-6 gap-9">
         <!-- Flex container para centrar el contenido -->
         <div class="flex flex-col items-center space-y-4">
-          <Dock client:visible />
+          <Dock client:only="svelte" />
           <span
             class="group relative w-40 h-10 flex items-center justify-center p-3
             rounded-full transition-all duration-300 ease-in-out transform border-2

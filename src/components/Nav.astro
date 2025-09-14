@@ -18,7 +18,6 @@ const navItems: NavItem[] = [
   { label: "nav_projects", href: "#projects" },
   { label: "nav_techs", href: "#technologies" },
   { label: "nav_gallery", href: "#gallery" },
-  // { label: "Contact", href: "#contact" },
 ];
 ---
 
@@ -62,79 +61,53 @@ const navItems: NavItem[] = [
       const nav = document.getElementById("main-nav") as HTMLElement | null;
       const navList = document.getElementById("nav-list") as HTMLElement | null;
       const burger = document.getElementById("burger") as HTMLElement | null;
-
-      const maxScroll = 1000;
+      const navLinks = document.querySelectorAll("nav a[href^='#']");
+      const sections = document.querySelectorAll("section[id]");
       let rafId: number | null = null;
-      let minWidth = 528;
+      let mainObserver: IntersectionObserver;
+      let lastKnownWidth = window.innerWidth;
 
-      burger?.addEventListener("click", () => {
-        navList?.classList.toggle("hidden");
-      });
-
-      function updateNav(): void {
-        if (!nav || !navList) return;
-
-        const contentWidth = navList.scrollWidth + 48;
-        minWidth = contentWidth;
-
-        const maxWidth = window.innerWidth * 0.8;
-
-        if (window.scrollY > 0) {
-          nav.classList.add("scrolling");
-
-          const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
-          const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
-
-          const currentWidth = Math.max(
-            minWidth + (maxWidth - minWidth) * (1 - easeProgress),
-            minWidth
-          );
-
-          if (window.innerWidth >= 768) {
-            nav.style.setProperty("width", `${currentWidth}px`);
+      if (nav) {
+        nav.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            navList?.classList.toggle("hidden");
           }
-        } else {
-          nav.classList.remove("scrolling");
-          nav.style.setProperty("width", "80%");
-        }
-
-        rafId = null;
+        });
       }
-
-      window.addEventListener("scroll", () => {
-        if (rafId === null) {
-          rafId = requestAnimationFrame(updateNav);
-        }
-      });
 
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e: Event) {
           e.preventDefault();
-          const target = e.currentTarget as HTMLAnchorElement;
+          const target = e.currentTarget as HTMLAnchorElement | null;
+          if (!target) return;
           const targetId = target.getAttribute("href")?.substring(1) || "";
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
             targetElement.scrollIntoView({ behavior: "smooth" });
           }
-
           if (window.innerWidth < 768 && navList) {
             navList.classList.add("hidden");
           }
         });
       });
 
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll("nav a[href^='#']");
-      const isMobile = window.innerWidth < 768;
+      const initializeObserver = () => {
+        if (mainObserver) {
+          mainObserver.disconnect();
+        }
 
-      const observerOptions: IntersectionObserverInit = {
-        threshold: isMobile ? 0.05 : 0.15,
-        rootMargin: isMobile ? "-20% 0px -60% 0px" : "-40% 0px -40% 0px",
-      };
+        const isMobile = window.innerWidth < 768;
+        const observerOptions: IntersectionObserverInit = {
+          rootMargin: isMobile ? "-20% 0px -60% 0px" : "-40% 0px -40% 0px",
+          threshold: isMobile ? 0.05 : 0.1,
+        };
 
-      const observerCallback: IntersectionObserverCallback = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+        const observerCallback: IntersectionObserverCallback = (entries) => {
+          const activeEntry = entries
+            .filter((entry: IntersectionObserverEntry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (activeEntry) {
             navLinks.forEach((link) => {
               link.classList.remove(
                 "active",
@@ -143,12 +116,8 @@ const navItems: NavItem[] = [
               );
               link.classList.add("text-[var(--white-icon)]");
             });
-
-            const id = entry.target.getAttribute("id");
-            const activeLink = document.querySelector(
-              `nav a[href="#${id}"]`
-            ) as HTMLAnchorElement | null;
-
+            const id = activeEntry.target.getAttribute("id");
+            const activeLink = document.querySelector(`nav a[href="#${id}"]`);
             if (activeLink) {
               activeLink.classList.add(
                 "active",
@@ -158,14 +127,58 @@ const navItems: NavItem[] = [
               activeLink.classList.remove("text-[var(--white-icon)]");
             }
           }
+        };
+
+        mainObserver = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        sections.forEach((section) => {
+          mainObserver.observe(section);
         });
       };
 
-      const observer = new IntersectionObserver(
-        observerCallback,
-        observerOptions
-      );
-      sections.forEach((section) => observer.observe(section));
+      initializeObserver();
+
+      window.addEventListener("resize", () => {
+        if (lastKnownWidth !== window.innerWidth) {
+          lastKnownWidth = window.innerWidth;
+          initializeObserver();
+        }
+      });
+
+      const maxScroll = 1000;
+      let minWidth = 528;
+
+      function updateNavWidth(): void {
+        if (!nav || !navList) return;
+        const contentWidth = navList.scrollWidth + 48;
+        minWidth = contentWidth;
+        const maxWidth = window.innerWidth * 0.8;
+
+        if (window.scrollY > 0) {
+          nav.classList.add("scrolling");
+          const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
+          const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
+          const currentWidth = Math.max(
+            minWidth + (maxWidth - minWidth) * (1 - easeProgress),
+            minWidth
+          );
+          if (window.innerWidth >= 768) {
+            nav.style.setProperty("width", `${currentWidth}px`);
+          }
+        } else {
+          nav.classList.remove("scrolling");
+          nav.style.setProperty("width", "80%");
+        }
+        rafId = null;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (rafId === null) {
+          rafId = requestAnimationFrame(updateNavWidth);
+        }
+      });
 
       if (navList) {
         minWidth = navList.scrollWidth + 48;
