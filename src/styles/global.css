@@ -8,6 +8,7 @@
     --white-icon: #ffffff;
     --gray-icon: #ff0000;
     --orange: #ff6900;
+    --orange-transparent: #ff6a007d;
     --gray: #D1D2DB;
     --sec: #a7a7a7;
     --component-bg: rgba(255, 255, 255, 0.1);
@@ -19,7 +20,6 @@
     width: 100%;
     height: 100%;
     background-color: #111827;
-    /* overflow-x: hidden; */
     scroll-behavior: smooth;
   }
 
@@ -103,8 +103,7 @@
   }
 
   #container {
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-      Arial, sans-serif;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
     height: auto; /* Puede ser 100% */
   }
 
@@ -183,6 +182,32 @@
     letter-spacing: -0.006em;
     margin: 0;
     margin-block: 1lh;
+  }
+
+  @layer base {
+    ::-webkit-scrollbar {
+      width: 1px;
+      height: 1px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--orange-transparent);
+      border-radius: 50%;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--orange-transparent);
+    }
+
+    /* Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--orange-transparent) transparent;
+    }
   }
 
   #news {
