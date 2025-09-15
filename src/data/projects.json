@@ -3,7 +3,7 @@
     {
       "title": "JV's Art Gallery",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "An online gallery that displays portraits made using different techniques",
       "technologies": ["astro", "tailwindcss", "react"]
@@ -21,7 +21,7 @@
     {
       "title": "Galería de Arte de JV",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "Una galería en línea que muestra retratos realizados con diferentes técnicas",
       "technologies": ["astro", "tailwindcss", "react"]
@@ -39,7 +39,7 @@
     {
       "title": "Galerie d'Art de JV",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "Une galerie en ligne qui présente des portraits réalisés avec différentes techniques",
       "technologies": ["astro", "tailwindcss", "react"]
@@ -57,7 +57,7 @@
     {
       "title": "Galleria d'Arte di JV",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "Una galleria online che mostra ritratti realizzati con diverse tecniche",
       "technologies": ["astro", "tailwindcss", "react"]
@@ -75,7 +75,7 @@
     {
       "title": "Galeria de Arte do JV",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "Uma galeria online que exibe retratos feitos com diferentes técnicas",
       "technologies": ["astro", "tailwindcss", "react"]
@@ -93,7 +93,7 @@
     {
       "title": "JV의 아트 갤러리",
       "image": "/_images/jvs-art-gallery.webp",
-      "url": "https://jv-art-gallery.vercel.app/",
+      "url": "https://jv-art-gallery.vercel.app/en/",
       "featured": 1,
       "description": "다양한 기법으로 제작된 초상화를 전시하는 온라인 갤러리",
       "technologies": ["astro", "tailwindcss", "react"]
