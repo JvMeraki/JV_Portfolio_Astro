@@ -1,17 +1,9 @@
-<table>
-  <tr>
-    <td valign="middle">
-      <h1>🚀 Javi Martínez <a href="https://jv-portfolio-astro.vercel.app/en">Portfolio</a></h1>
-      <p>
-        Welcome to my personal portfolio, built with <a href="https://astro.build">Astro</a>, <a href="https://svelte.dev">Svelte</a>, and <a href="https://tailwindcss.com">TailwindCSS</a>!
-        Showcasing my projects, skills, and experience as a web developer.
-      </p>
-    </td>
-    <td valign="middle" width="100">
-      <img src="public/profile-pic.webp" alt="Profile" width="70" style="border-radius:50%;margin-left:20px;">
-    </td>
-  </tr>
-</table>
+# 🚀 Javi Martínez Portfolio
+
+Welcome to my personal portfolio, built with [Astro](https://astro.build), [Svelte](https://svelte.dev), and [TailwindCSS](https://tailwindcss.com)!  
+Showcasing my projects, skills, and experience as a web developer.
+
+![Portfolio Preview](public/profile-pic.webp)
 
 ---
 
@@ -78,7 +70,7 @@
 
 ---
 
-## 🌐 Internationalization (i18n)
+## 🌐 Internationalization
 
 This portfolio supports multiple languages.  
 Change the language using the picker in the navigation bar.
@@ -87,37 +79,31 @@ Change the language using the picker in the navigation bar.
 
 ## 📦 Tech Stack
 
-- [**Astro**](https://astro.build/) – Static site generator
-- [**Svelte**](https://svelte.dev/) – Interactive components
-- [**TailwindCSS**](https://tailwindcss.com/) – Utility-first CSS
-- [**TypeScript**](https://www.typescriptlang.org/) – Type safety
-- [**Vercel**](https://vercel.com/) – Deployment
+- **Astro** – Static site generator
+- **Svelte** – Interactive components
+- **TailwindCSS** – Utility-first CSS
+- **TypeScript** – Type safety
+- **Vercel** – Deployment
 
 ---
 
 ## 📸 Screenshots
 
-<p align="center">
-  <img src="public/screenshots/home.png" alt="Home" width="600" style="margin:10px;">
-</p>
-<p align="center">
-  <img src="public/screenshots/techs.png" alt="Technologies" width="600" style="margin:10px;">
-</p>
-<p align="center">
-  <img src="public/screenshots/projects.png" alt="Projects" width="600" style="margin:10px;">
-</p>
-<p align="center">
-  <img src="public/screenshots/movil.png" alt="Movil" width="350" style="margin:10px;">
-</p>
+| Home                                 | Technologies                           |
+| ------------------------------------ | -------------------------------------- |
+| ![Home](public/screenshots/home.png) | ![Techs](public/screenshots/techs.png) |
 
----
+| Projects                                     | Movil                                  |
+| -------------------------------------------- | -------------------------------------- |
+| ![Projects](public/screenshots/projects.png) | ![Movil](public/screenshots/movil.png) |
 
 ---
 
 ## 🤝 Connect
 
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="22" style="vertical-align:middle;margin-right:6px;"> [LinkedIn](https://www.linkedin.com/in/brayanjmartinezp/)
-- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="22" style="vertical-align:middle;margin-right:6px;"> [Instagram](https://www.instagram.com/jv_fearnot)
+- [GitHub](https://github.com/JvMeraki)
+- [LinkedIn](https://www.linkedin.com/in/brayanjmartinezp/)
+- [Instagram](https://www.instagram.com/jv_fearnot)
 
 ---
 
