@@ -16,7 +16,13 @@ const current = getLangFromUrl(Astro.url);
     aria-haspopup="true"
     aria-expanded="false"
   >
-    <span class="leading-none">🌐</span>
+    <span class="leading-none">
+      <img
+        src=`/flags/${current === 'en' ? 'us' : current}.svg`
+        class="w-5 h-5 rounded-full me-2"
+        alt=`${LANGUAGES[current]} Flag`
+      />
+    </span>
     <span class="leading-none">{LANGUAGES[current]}</span>
   </button>
 
@@ -39,8 +45,13 @@ const current = getLangFromUrl(Astro.url);
           <a
             role="menuitem"
             href={`/${lang}`}
-            class="block px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-white/10 hover:text-[#FF6900] rounded-md text-center"
+            class="flex px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-white/10 hover:text-[#FF6900] rounded-md items-center text-left gap-6"
           >
+            <img
+              src={`/flags/${lang === "en" ? "us" : lang}.svg`}
+              class="w-4 h-4 rounded-full"
+              alt={`${lang} Flag`}
+            />
             {label}
           </a>
         </li>
