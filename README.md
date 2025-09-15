@@ -112,8 +112,6 @@ Change the language using the picker in the navigation bar.
 
 ---
 
----
-
 ## 🤝 Connect
 
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="22" style="vertical-align:middle;margin-right:6px;"> [LinkedIn](https://www.linkedin.com/in/brayanjmartinezp/)
