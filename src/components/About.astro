@@ -21,6 +21,21 @@ const t = useTranslations(lang);
 const about = aboutData[lang];
 const education = educationData[lang];
 const experience = experienceData[lang];
+
+function replaceAge(content: string) {
+  const ageToReplace = "%edad%";
+  const birthday = new Date("1998-06-12");
+  const today = new Date();
+
+  let currentAge = today.getFullYear() - birthday.getFullYear();
+  const month = today.getMonth() - birthday.getMonth();
+
+  if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+    currentAge--;
+  }
+
+  return content.replace(ageToReplace, currentAge.toString());
+}
 ---
 
 <section id="about" class="mt-20 md:mt-32 bg-transparent mb-8 pb-8">
@@ -43,7 +58,7 @@ const experience = experienceData[lang];
           </h3>
           <p
             class="text-left text-[var(--gray)] text-lg md:text-xl leading-relaxed"
-            set:html={highlight(item.description, item.enphasis)}
+            set:html={highlight(replaceAge(item.description), item.enphasis)}
           />
         </div>
       ))
