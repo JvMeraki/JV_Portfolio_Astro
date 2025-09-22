@@ -22,10 +22,14 @@ const about = aboutData[lang];
 const education = educationData[lang];
 const experience = experienceData[lang];
 
-function replaceAge(content: string) {
+function replaceAge(content: string, currentAge: number) {
   const ageToReplace = "%edad%";
-  const birthday = new Date("1998-06-12");
+  return content.replace(ageToReplace, currentAge.toString());
+}
+
+function calculateAge() {
   const today = new Date();
+  const birthday = new Date("1998-06-12");
 
   let currentAge = today.getFullYear() - birthday.getFullYear();
   const month = today.getMonth() - birthday.getMonth();
@@ -34,7 +38,7 @@ function replaceAge(content: string) {
     currentAge--;
   }
 
-  return content.replace(ageToReplace, currentAge.toString());
+  return currentAge;
 }
 ---
 
@@ -58,7 +62,10 @@ function replaceAge(content: string) {
           </h3>
           <p
             class="text-left text-[var(--gray)] text-lg md:text-xl leading-relaxed"
-            set:html={highlight(replaceAge(item.description), item.enphasis)}
+            set:html={highlight(
+              replaceAge(item.description, calculateAge()),
+              item.enphasis
+            )}
           />
         </div>
       ))
