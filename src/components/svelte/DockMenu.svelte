@@ -81,6 +81,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center w-full h-full hover:text-[var(--orange)]"
+              aria-label={`Visit my '${dockItem.icon.link}' to more info.`}
             >
               <svelte:component
                 this={dockItem.icon.component}
