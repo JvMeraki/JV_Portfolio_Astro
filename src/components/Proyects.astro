@@ -9,6 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const projects = projectsData[lang];
+const gh = import.meta.env.PUBLIC_URL_GITHUB;
 ---
 
 <section class="pt-4">
@@ -28,7 +29,7 @@ const projects = projectsData[lang];
       <p class="text-right text-2xl">
         <a
           class="text-primary text-gray-300"
-          href="https://github.com/JvMeraki"
+          href={gh}
         >
           {t("content_projects_complement1")}
           <span class="text-[var(--sec)] shiny-sec">

@@ -19,21 +19,21 @@
       props: {
         size: 32,
       },
-      link: "https://github.com/JvMeraki",
+      link: import.meta.env.PUBLIC_URL_GITHUB,
     },
     linkedin: {
       component: Linkedin,
       props: {
         size: 32,
       },
-      link: "https://www.linkedin.com/in/brayanjmartinezp/",
+      link: import.meta.env.PUBLIC_URL_LINKEDIN,
     },
     instagram: {
       component: Instagram,
       props: {
         size: 32,
       },
-      link: "https://www.instagram.com/Jv_fearnot",
+      link: import.meta.env.PUBLIC_URL_INSTAGRAM,
     },
   };
 

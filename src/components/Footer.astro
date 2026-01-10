@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const gh = import.meta.env.PUBLIC_URL_GITHUB;
 ---
 
 <footer class="w-full py-12 border-t border-[#ffffff10] relative">
@@ -99,7 +100,7 @@ const t = useTranslations(lang);
         <span class="block sm:inline">
           {t("footer_create")}
           <a
-            href="https://github.com/JvMeraki"
+            href={gh}
             target="_blank"
             class="text-gray-400 hover:text-[var(--orange)] transition-colors duration-300"
             >{t("footer_name")}</a

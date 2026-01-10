@@ -4,6 +4,7 @@ import "@/styles/global.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const ig = import.meta.env.PUBLIC_URL_INSTAGRAM;
 ---
 
 <section id="gallery" class="mt-20 md:mt-32 bg-transparent mb-8 pb-8">
@@ -34,7 +35,7 @@ const t = useTranslations(lang);
           {t("content_gallery_url")}
         </a>. {t("content_gallery_text2")}
         <a
-          href="https://www.instagram.com/jv_fearnot"
+          href={ig}
           target="_blank"
           rel="noopener noreferrer"
           class="font-semibold shiny-insta hover:underline"
