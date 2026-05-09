@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 const gh = import.meta.env.PUBLIC_URL_GITHUB;
 ---
 
-<footer class="w-full py-12 border-t border-[#ffffff10] relative">
+<footer class="w-full py-12 border-t border-[var(--border-subtle)] relative">
   <div class="max-w-5xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
       <div class="flex flex-col items-center lg:items-start space-y-6">
@@ -70,7 +70,7 @@ const gh = import.meta.env.PUBLIC_URL_GITHUB;
                 <img
                   src={tech.icon}
                   alt={tech.alt}
-                  class="h-5 w-5 object-contain filter brightness-0 invert opacity-50"
+                  class="h-5 w-5 object-contain tech-icon"
                   loading="lazy"
                 />
                 <span class="text-[var(--white-icon)] text-sm">
@@ -85,7 +85,7 @@ const gh = import.meta.env.PUBLIC_URL_GITHUB;
       <div class="flex flex-col items-center lg:items-end space-y-6">
         <div class="flex items-center justify-center lg:justify-end">
           <div
-            class="relative w-40 h-40 rounded-full overflow-hidden shadow-[0_0_20px_5px_rgba(255,255,255,0.5)]"
+            class="relative w-40 h-40 rounded-full overflow-hidden shadow-[0_0_20px_5px_var(--background-blur)]"
           >
             <img
               src="/profile-pic.webp"
@@ -97,14 +97,14 @@ const gh = import.meta.env.PUBLIC_URL_GITHUB;
       </div>
     </div>
 
-    <div class="mt-12 pt-8 border-t border-[#ffffff10]">
+    <div class="mt-12 pt-8 border-t border-[var(--border-subtle)]">
       <p class="text-center text-sm text-[var(--white-icon)] space-y-2">
         <span class="block sm:inline">
           {t("footer_create")}
           <a
             href={gh}
             target="_blank"
-            class="text-gray-400 hover:text-[var(--orange)] transition-colors duration-300"
+            class="text-[var(--sec)] hover:text-[var(--orange)] transition-colors duration-300"
             >{t("footer_name")}</a
           >. {t("year")}.
         </span>

@@ -54,18 +54,21 @@
 
 <div
   class={cn(side === "top" ? "top-4" : "bottom-4", className)}
-  style="background-color: var(--background);"
   {...$$restProps}
 >
   <Motion let:motion>
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div
       use:motion
       bind:this={containerRef}
-      class="h-16 items-end gap-4 rounded-full bg-neutral-950 border border-neutral-800 px-3 pb-2 flex shadow-inner shadow-neutral-300/5"
-      style="background-color: var(--background);"
-      on:mouseleave={() => mouseX.set(Infinity)}
-      on:mousemove={(e) => {
+      class="h-16 items-end gap-4 rounded-full px-3 pb-2 flex"
+      style="
+        background-color: var(--dock-bg);
+        border: 1px solid var(--dock-border);
+        box-shadow: inset 0 1px 0 var(--dock-shine), 0 4px 16px var(--dock-shadow);
+      "
+      onmouseleave={() => mouseX.set(Infinity)}
+      onmousemove={(e) => {
         const rect = containerRef.getBoundingClientRect();
         if (rect) {
           mouseX.set(e.clientX - rect.left);
@@ -80,8 +83,11 @@
               href={dockItem.icon.link}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center w-full h-full hover:text-[var(--orange)]"
+              class="flex items-center justify-center w-full h-full transition-colors duration-200"
+              style="color: var(--dock-icon); "
               aria-label={`Visit my '${dockItem.icon.link}' to more info.`}
+              onmouseenter={(e) => e.currentTarget.style.color = 'var(--orange)'}
+              onmouseleave={(e) => e.currentTarget.style.color = 'var(--dock-icon)'}
             >
               <svelte:component
                 this={dockItem.icon.component}

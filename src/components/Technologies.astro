@@ -3,22 +3,30 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 let showAll = false;
 const technologies = [
-  "astro",
-  "svelte",
-  "typeScript",
-  "tailwindcss",
-  "nodejs",
-  "python",
-  "HTML5",
-  "CSS3",
-  "javaScript",
-  "react",
-  "git",
-  "figma",
-  "mysql",
+  { name: "astro",       lightIcon: "astro-dark" },
+  { name: "svelte" },
+  { name: "typeScript" },
+  { name: "tailwindcss" },
+  { name: "nodejs" },
+  { name: "python" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "javaScript" },
+  { name: "react" },
+  { name: "git" },
+  { name: "figma" },
+  { name: "mysql", darkIcon: "mysql-light" },
 ];
+
 function capitalize(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+function getIcon(tech: { name: string; lightIcon?: string; darkIcon?: string }) {
+  return {
+    light: `/svg/${tech.lightIcon ?? tech.name}.svg`,
+    dark:  `/svg/${tech.darkIcon  ?? tech.name}.svg`,
+  };
 }
 
 const lang = getLangFromUrl(Astro.url);
@@ -35,42 +43,30 @@ const t = useTranslations(lang);
       {t("content_tech_title")}
     </h2>
     <div class="relative overflow-x-hidden">
-      <div
-        class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
-      >
-      </div>
-      <div
-        class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
-      >
-      </div>
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"></div>
 
-      <div
-        class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
-      >
+      <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
         {
-          [...technologies, ...technologies, ...technologies].map((tech) => (
-            <div class="flex items-center gap-2 group transition-all duration-300">
-              <img
-                src={`/svg/${tech}.svg`}
-                alt={tech}
-                class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
-                width="30"
-                height="30"
-                loading="lazy"
-              />
-              <span class="text-lg font-medium text-[var(--white-icon)]">
-                {tech.charAt(0).toUpperCase() + tech.slice(1)}
-              </span>
-            </div>
-          ))
+          [...technologies, ...technologies, ...technologies].map((tech) => {
+            const icons = getIcon(tech);
+            return (
+              <div class="flex items-center gap-2 group transition-all duration-300">
+                <img src={icons.light} alt={tech.name} class="icon-light h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
+                <img src={icons.dark}  alt={tech.name} class="icon-dark  h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
+                <span class="text-lg font-medium text-[var(--white-icon)]">
+                  {capitalize(tech.name)}
+                </span>
+              </div>
+            );
+          })
         }
       </div>
     </div>
   </div>
+
   <div class="w-full flex justify-center mt-12">
-    <div
-      class="relative inline-flex overflow-hidden rounded-full p-[3px] transition-all duration-300 ease-in-out hover:scale-105"
-    >
+    <div class="relative inline-flex overflow-hidden rounded-full p-[3px] transition-all duration-300 ease-in-out hover:scale-105">
       <span
         class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
         bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,var(--orange)_40%,transparent_100%)] group-hover:scale-125"
@@ -87,23 +83,24 @@ const t = useTranslations(lang);
       </button>
     </div>
   </div>
+
   <div
     id="toolList"
-    class="hidden grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-xs mx-auto px-4"
+    class="hidden grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-xs mx-auto px-4 bg-[var(--foreground-subtle-5)] rounded-xl p-5 border border-[var(--foreground-subtle-1)] backdrop-blur-lg shadow-sm"
   >
     {
-      technologies.map((tech) => (
-        <div class="flex items-center gap-3">
-          <img
-            src={`/svg/${tech}.svg`}
-            alt={tech}
-            class="w-6 h-6 object-contain opacity-70"
-          />
-          <span class="text-[var(--white-icon)] text-lg font-medium">
-            {capitalize(tech)}
-          </span>
-        </div>
-      ))
+      technologies.map((tech) => {
+        const icons = getIcon(tech);
+        return (
+          <div class="flex items-center gap-3">
+            <img src={icons.light} alt={tech.name} class="icon-light w-6 h-6 object-contain opacity-90" />
+            <img src={icons.dark}  alt={tech.name} class="icon-dark  w-6 h-6 object-contain opacity-90" />
+            <span class="text-[var(--white-icon)] text-lg font-medium">
+              {capitalize(tech.name)}
+            </span>
+          </div>
+        );
+      })
     }
   </div>
 </section>

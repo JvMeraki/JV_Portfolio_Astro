@@ -37,8 +37,8 @@
     role="button"
     bind:this={dockItem}
     use:motion
-    class="group p-2 flex aspect-square items-center justify-center overflow-hidden rounded-full transition active:-translate-y-10 bg-neutral-950 border-neutral-800 border shadow-inner shadow-neutral-300/20 active:duration-1000 active:ease-out text-neutral-400 hover:text-white duration-500"
-    style="background-color: var(--background);"
+    class="group p-2 flex aspect-square items-center justify-center overflow-hidden rounded-full transition active:-translate-y-10 active:duration-1000 active:ease-out duration-500"
+    style="background-color: var(--dock-bg); border: 1px solid var(--dock-border);"
   >
     <slot />
   </div>

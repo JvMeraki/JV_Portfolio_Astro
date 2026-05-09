@@ -1,0 +1,133 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  data-theme-picker
+  class="relative group flex justify-center md:inline-flex md:justify-start"
+>
+  <button
+    type="button"
+    data-theme-btn
+    class="flex flex-row items-center gap-1 text-[var(--white-icon)]
+           transition-colors text-xs md:text-base hover:text-[var(--primary)] focus:outline-none"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span data-theme-icon class="leading-none">
+      <!-- El ícono se inyecta por JS -->
+    </span>
+    <span class="leading-none">{t("theme_label")}</span>
+  </button>
+
+  <span class="hidden md:block absolute left-0 right-0 top-full h-4 z-40 pointer-events-auto"></span>
+
+  <ul
+    data-theme-menu
+    class="absolute bottom-[calc(100%+0.5rem)] md:top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2
+           md:bottom-auto md:w-40 w-44 bg-[var(--background)] border border-[var(--foreground-subtle-1)] rounded-lg shadow-lg
+           opacity-0 translate-y-1 md:translate-y-1 pointer-events-none
+           md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-hover:pointer-events-auto
+           transition-all duration-150 ease-in-out z-50"
+    role="menu"
+  >
+    <li role="none">
+      <button
+        role="menuitem"
+        data-theme-option="light"
+        class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        {t("theme_light")}
+      </button>
+    </li>
+    <li role="none">
+      <button
+        role="menuitem"
+        data-theme-option="system"
+        class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        {t("theme_system")}
+      </button>
+    </li>
+    <li role="none">
+      <button
+        role="menuitem"
+        data-theme-option="dark"
+        class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        {t("theme_dark")}
+      </button>
+    </li>
+  </ul>
+</div>
+
+<script>
+  import { setTheme, getTheme } from "@/stores/theme";
+
+  const ICONS: Record<string, string> = {
+    light: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`,
+    system: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+    dark:  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`,
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = () => window.innerWidth < 768;
+
+    document.querySelectorAll("[data-theme-picker]").forEach((root) => {
+      const btn = root.querySelector("[data-theme-btn]") as HTMLElement | null;
+      const menu = root.querySelector("[data-theme-menu]") as HTMLElement | null;
+      const iconSlot = root.querySelector("[data-theme-icon]") as HTMLElement | null;
+
+      if (!btn || !menu || !iconSlot) return;
+
+      // Sincronizar ícono con tema actual
+      const syncIcon = () => {
+        const current = getTheme();
+        if (iconSlot) iconSlot.innerHTML = ICONS[current] ?? ICONS.system;
+      };
+      syncIcon();
+
+      const openMenu = () => {
+        menu.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+        menu.classList.remove("opacity-0", "translate-y-1", "pointer-events-none");
+        btn.setAttribute("aria-expanded", "true");
+      };
+
+      const closeMenu = () => {
+        menu.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+        menu.classList.add("opacity-0", "translate-y-1", "pointer-events-none");
+        btn.setAttribute("aria-expanded", "false");
+      };
+
+      closeMenu();
+      window.addEventListener("resize", closeMenu);
+
+      btn.addEventListener("click", (e) => {
+        if (!isMobile()) return;
+        e.stopPropagation();
+        menu.classList.contains("opacity-100") ? closeMenu() : openMenu();
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!isMobile()) return;
+        if (!(e.target instanceof Node) || !root.contains(e.target)) closeMenu();
+      });
+
+      // Opciones del menú
+      root.querySelectorAll("[data-theme-option]").forEach((option) => {
+        option.addEventListener("click", () => {
+          const theme = (option as HTMLElement).dataset.themeOption as "light" | "dark" | "system";
+          setTheme(theme);
+          syncIcon();
+          closeMenu();
+        });
+      });
+    });
+  });
+</script>

@@ -14,7 +14,7 @@ const gh = import.meta.env.PUBLIC_URL_GITHUB;
 
 <section class="pt-4">
   <ContentSection title={t("content_projects_title")} id="projects">
-    <div slot="lead" class="text-gray-300 text-2xl mb-[-20px]">
+    <div slot="lead" class="text-[var(--gray)] text-2xl mb-[-20px]">
       {t("content_projects_text")}
       <span class="text-[var(--sec)] shiny-sec">
         {t("content_projects_techs")}
@@ -28,14 +28,14 @@ const gh = import.meta.env.PUBLIC_URL_GITHUB;
       </div>
       <p class="text-right text-2xl">
         <a
-          class="text-primary text-gray-300"
+          class="text-primary text-[var(--gray)]"
           href={gh}
         >
           {t("content_projects_complement1")}
           <span class="text-[var(--sec)] shiny-sec">
             {t("content_projects_complement2")}
           </span>.
-          <span class="text-gray-300"> &rarr; </span>
+          <span class="text-[var(--gray)]"> &rarr; </span>
         </a>
       </p>
     </div>
