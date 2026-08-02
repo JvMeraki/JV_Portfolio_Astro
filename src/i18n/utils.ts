@@ -1,5 +1,18 @@
 import { DEFAULTLANG, LABELS } from './ui';
 
+export function interpolate(
+    text: string,
+    params?: Record<string, string | number>
+) {
+    if (!params) return text;
+
+    return Object.entries(params).reduce(
+        (result, [key, value]) =>
+            result.replaceAll(`{${key}}`, String(value)),
+        text
+    );
+}
+
 export function getLangFromUrl(url: URL) {
     const [, lang] = url.pathname.split('/');
     if (lang in LABELS) { 
@@ -13,14 +26,8 @@ export function useTranslations(lang: keyof typeof LABELS) {
         key: keyof typeof LABELS[typeof DEFAULTLANG],
         params?: Record<string, string | number>
     ) {
-        let translation: string = LABELS[lang][key] || LABELS[DEFAULTLANG][key];
-        if (!translation) return "";
-
-        if (params) {
-            Object.entries(params).forEach(([paramKey, paramValue]) => {
-                translation = translation.replace(new RegExp(`{${paramKey}}`, 'g'), String(paramValue));
-            });
-        }
-        return translation;
+        const translation = LABELS[lang][key] ?? LABELS[DEFAULTLANG][key];
+        
+        return interpolate(translation, params);
     }
 }

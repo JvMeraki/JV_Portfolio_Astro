@@ -9,12 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^8.1.0",
+    "@astrojs/svelte": "^9.0.1",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^10.0.6",
+    "@astrojs/vercel": "^11.0.4",
     "@fontsource/potta-one": "^5.2.5",
     "@fontsource/rampart-one": "^5.2.5",
-    "astro": "^6.3.1",
+    "astro": "^7.1.6",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "lucide-svelte": "^0.510.0",

@@ -2,7 +2,7 @@
   "en": [
     {
       "title": "Who am I?",
-      "description": "My name is Brayan Javier Martínez Pinzón, a %edad%-year-old self-taught developer from Colombia 🇨🇴.",
+      "description": "My name is Brayan Javier Martínez Pinzón, a {age}-year-old self-taught developer from Colombia 🇨🇴.",
       "enphasis": "Brayan Javier Martínez Pinzón"
     },
     {
@@ -23,7 +23,7 @@
   "es": [
     {
       "title": "¿Quién soy?",
-      "description": "Me llamo Brayan Javier Martínez Pinzón, un desarrollador autodidacta de %edad% años de Colombia 🇨🇴.",
+      "description": "Me llamo Brayan Javier Martínez Pinzón, un desarrollador autodidacta de {age} años de Colombia 🇨🇴.",
       "enphasis": "Brayan Javier Martínez Pinzón"
     },
     {
@@ -44,7 +44,7 @@
   "fr": [
     {
       "title": "Qui suis-je ?",
-      "description": "Je m'appelle Brayan Javier Martínez Pinzón, un développeur autodidacte de %edad% ans originaire de Colombie 🇨🇴.",
+      "description": "Je m'appelle Brayan Javier Martínez Pinzón, un développeur autodidacte de {age} ans originaire de Colombie 🇨🇴.",
       "enphasis": "Brayan Javier Martínez Pinzón"
     },
     {
@@ -65,7 +65,7 @@
   "it": [
     {
       "title": "Chi sono?",
-      "description": "Mi chiamo Brayan Javier Martínez Pinzón, uno sviluppatore autodidatta di %edad% anni proveniente dalla Colombia 🇨🇴.",
+      "description": "Mi chiamo Brayan Javier Martínez Pinzón, uno sviluppatore autodidatta di {age} anni proveniente dalla Colombia 🇨🇴.",
       "enphasis": "Brayan Javier Martínez Pinzón"
     },
     {
@@ -86,7 +86,7 @@
   "pt": [
     {
       "title": "Quem sou eu?",
-      "description": "Meu nome é Brayan Javier Martínez Pinzón, um desenvolvedor autodidata de %edad% anos da Colômbia 🇨🇴.",
+      "description": "Meu nome é Brayan Javier Martínez Pinzón, um desenvolvedor autodidata de {age} anos da Colômbia 🇨🇴.",
       "enphasis": "Brayan Javier Martínez Pinzón"
     },
     {
@@ -107,7 +107,7 @@
   "kr": [
     {
       "title": "나는 누구인가?",
-      "description": "저는 콜롬비아 🇨🇴 출신의 %edad%세 독학 개발자 브라얀 하비에르 마르티네스 핀손입니다.",
+      "description": "저는 콜롬비아 🇨🇴 출신의 {age}세 독학 개발자 브라얀 하비에르 마르티네스 핀손입니다.",
       "enphasis": "브라얀 하비에르 마르티네스 핀손"
     },
     {
