@@ -2,13 +2,14 @@
 import Card from "@/components/CardProject.astro";
 import ContentSection from "@/components/Content-section.astro";
 import projectsData from "@/data/projects.json";
+import type { Project } from "@/data/types";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import "@/styles/global.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const projects = projectsData[lang];
+const projects = (projectsData as Record<string, Project[]>)[lang];
 const gh = import.meta.env.PUBLIC_URL_GITHUB;
 ---
 

@@ -1,15 +1,10 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getTechnology } from "@/data/technologies";
+import type { Project } from "@/data/types";
 
 export interface Props {
-  project: {
-    title: string;
-    url: string;
-    image: string;
-    featured: number;
-    description?: string;
-    technologies?: string[];
-  };
+  project: Project;
 }
 
 const { project } = Astro.props;
@@ -46,14 +41,27 @@ const t = useTranslations(lang);
       {
         project.technologies && (
           <div class="flex flex-wrap items-center gap-2">
-            {project.technologies.map((tech) => (
-              <img
-                src={`/svg/${tech}.svg`}
-                alt={tech}
-                title={tech}
-                class="h-5 w-5 sm:h-6 sm:w-6"
-              />
-            ))}
+            {project.technologies.map((name) => {
+              const tech = getTechnology(name);
+
+              return (
+                <span class="relative inline-blok h-5 w-5 sm:h-6 sm:w-6">
+                <img
+                  src={tech.light}
+                  alt={tech.label}
+                  title={tech.label}
+                  class="h-5 w-5 sm:h-6 sm:w-6 dark:hidden"
+                />
+
+                <img
+                  src={tech.dark}
+                  alt={tech.label}
+                  title={tech.label}
+                  class="h-5 w-5 sm:h-6 sm:w-6 hidden dark:block"
+                />
+                </span>
+              )
+            })}
           </div>
         )
       }

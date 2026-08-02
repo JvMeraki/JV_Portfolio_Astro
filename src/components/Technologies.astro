@@ -1,34 +1,10 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { TECHNOLOGIES, getTechnology } from "@/data/technologies";
 
 let showAll = false;
-const technologies = [
-  { name: "astro",       lightIcon: "astro-dark" },
-  { name: "svelte" },
-  { name: "typeScript" },
-  { name: "tailwind" },
-  { name: "nodejs" },
-  { name: "python" },
-  { name: "HTML5" },
-  { name: "CSS3" },
-  { name: "javaScript" },
-  { name: "react" },
-  { name: "vue" },
-  { name: "git" },
-  { name: "figma" },
-  { name: "mysql", darkIcon: "mysql-light" },
-];
 
-function capitalize(name: string) {
-  return name.charAt(0).toUpperCase() + name.slice(1);
-}
-
-function getIcon(tech: { name: string; lightIcon?: string; darkIcon?: string }) {
-  return {
-    light: `/svg/${tech.lightIcon ?? tech.name}.svg`,
-    dark:  `/svg/${tech.darkIcon  ?? tech.name}.svg`,
-  };
-}
+const technologies = Object.keys(TECHNOLOGIES) as Array<keyof typeof TECHNOLOGIES>;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -49,14 +25,14 @@ const t = useTranslations(lang);
 
       <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
         {
-          [...technologies, ...technologies, ...technologies].map((tech) => {
-            const icons = getIcon(tech);
+          [...technologies, ...technologies, ...technologies].map((name) => {
+            const tech = getTechnology(name);
             return (
               <div class="flex items-center gap-2 group transition-all duration-300">
-                <img src={icons.light} alt={tech.name} class="icon-light h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
-                <img src={icons.dark}  alt={tech.name} class="icon-dark  h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
+                <img src={tech.light} alt={tech.label} class="icon-light h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
+                <img src={tech.dark}  alt={tech.label} class="icon-dark  h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60" width="30" height="30" loading="lazy" />
                 <span class="text-lg font-medium text-[var(--white-icon)]">
-                  {capitalize(tech.name)}
+                  {tech.label}
                 </span>
               </div>
             );
@@ -90,14 +66,14 @@ const t = useTranslations(lang);
     class="hidden grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-8 max-w-xs mx-auto px-4 bg-[var(--foreground-subtle-5)] rounded-xl p-5 border border-[var(--foreground-subtle-1)] backdrop-blur-lg shadow-sm"
   >
     {
-      technologies.map((tech) => {
-        const icons = getIcon(tech);
+      technologies.map((name) => {
+        const tech = getTechnology(name);
         return (
           <div class="flex items-center gap-3">
-            <img src={icons.light} alt={tech.name} class="icon-light w-6 h-6 object-contain opacity-90" />
-            <img src={icons.dark}  alt={tech.name} class="icon-dark  w-6 h-6 object-contain opacity-90" />
+            <img src={tech.light} alt={tech.label} class="icon-light w-6 h-6 object-contain opacity-90" />
+            <img src={tech.dark}  alt={tech.label} class="icon-dark  w-6 h-6 object-contain opacity-90" />
             <span class="text-[var(--white-icon)] text-lg font-medium">
-              {capitalize(tech.name)}
+              {tech.label}
             </span>
           </div>
         );
