@@ -1,8 +1,18 @@
 {
   "en": [
     {
+      "entity": "Corporación Unificada Nacional de Educación Superior (CUN)",
+      "date": "2026 - Present",
+      "title": "Software Engineering"
+    },
+    {
+      "entity": "Los Andes University",
+      "date": "2026",
+      "title": "Frontend with HTML, CSS, and JavaScript Diploma"
+    },
+    {
       "entity": "Manuela Beltrán University",
-      "date": "2023 - Present",
+      "date": "2023 - 2024",
       "title": "Software Engineering"
     },
     {
@@ -23,8 +33,18 @@
   ],
   "es": [
     {
+      "entity": "Corporación Unificada Nacional de Educación Superior (CUN)",
+      "date": "2026 - Presente",
+      "title": "Ingeniería de Software"
+    },
+    {
+      "entity": "Universidad de los Andes",
+      "date": "2026",
+      "title": "Diplomado en Frontend con HTML, CSS y JavaScript"
+    },
+    {
       "entity": "Universidad Manuela Beltrán",
-      "date": "2023 - Presente",
+      "date": "2023 - 2024",
       "title": "Ingeniería de Software"
     },
     {
@@ -45,8 +65,18 @@
   ],
   "fr": [
     {
+      "entity": "Corporation nationale unifiée d'enseignement supérieur (CUN)",
+      "date": "2026 - Présent",
+      "title": "Génie logiciel"
+    },
+    {
+      "entity": "Université des Andes",
+      "date": "2026",
+      "title": "Diplôme en frontend avec HTML, CSS et JavaScript"
+    },
+    {
       "entity": "Université Manuela Beltrán",
-      "date": "2023 - Présent",
+      "date": "2023 - 2024",
       "title": "Génie logiciel"
     },
     {
@@ -67,8 +97,18 @@
   ],
   "it": [
     {
+      "entity": "Corporazione Unificata Nazionale dell'Istruzione Superiore (CUN)",
+      "date": "2026 - Presente",
+      "title": "Ingegneria del Software"
+    },
+    {
+      "entity": "Università de Los Andes",
+      "date": "2026",
+      "title": "Diploma in Frontend con HTML, CSS e JavaScript"
+    },
+    {
       "entity": "Università Manuela Beltrán",
-      "date": "2023 - Presente",
+      "date": "2023 - 2024",
       "title": "Ingegneria del Software"
     },
     {
@@ -89,8 +129,18 @@
   ],
   "pt": [
     {
+      "entity": "Corporação Unificada Nacional de Educação Superior (CUN)",
+      "date": "2026 - Presente",
+      "title": "Engenharia de Software"
+    },
+    {
+      "entity": "Universidade dos Andes",
+      "date": "2026",
+      "title": "Diploma em Frontend com HTML, CSS e JavaScript"
+    },
+    {
       "entity": "Universidade Manuela Beltrán",
-      "date": "2023 - Presente",
+      "date": "2023 - 2024",
       "title": "Engenharia de Software"
     },
     {
@@ -111,8 +161,18 @@
   ],
   "kr": [
     {
+      "entity": "국립 고등교육 통합 법인 (CUN)",
+      "date": "2026 - 현재",
+      "title": "소프트웨어 공학"
+    },
+    {
+      "entity": "로스 안데스 대학교",
+      "date": "2026",
+      "title": "HTML, CSS 및 JavaScript 프론트엔드 디플로마"
+    },
+    {
       "entity": "마누엘라 벨트란 대학교",
-      "date": "2023 - 현재",
+      "date": "2023 - 2024",
       "title": "소프트웨어 공학"
     },
     {

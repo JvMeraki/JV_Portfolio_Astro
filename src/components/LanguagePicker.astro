@@ -106,7 +106,11 @@ const current = getLangFromUrl(Astro.url);
         if (!isMobile()) return;
         e.stopPropagation();
         const isOpen = menu.classList.contains("opacity-100");
-        isOpen ? closeMenu() : openMenu();
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
 
       document.addEventListener("click", (e) => {

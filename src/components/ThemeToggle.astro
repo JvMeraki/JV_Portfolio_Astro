@@ -111,7 +111,11 @@ const t = useTranslations(lang);
       btn.addEventListener("click", (e) => {
         if (!isMobile()) return;
         e.stopPropagation();
-        menu.classList.contains("opacity-100") ? closeMenu() : openMenu();
+        if (menu.classList.contains("opacity-100")) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
 
       document.addEventListener("click", (e) => {

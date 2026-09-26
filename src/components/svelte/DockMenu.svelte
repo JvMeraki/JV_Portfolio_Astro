@@ -4,11 +4,13 @@
   import { Motion, useMotionValue } from "svelte-motion";
   import DockItem from "./DockItem.svelte";
 
+  type DockIcon = typeof Github | typeof Instagram | typeof Linkedin;
+
   type DockItem = {
     id: string;
     icon?: {
-      component: any;
-      props?: Record<string, any>;
+      component: DockIcon;
+      props?: Record<string, unknown>;
       link: string;
     };
   };
@@ -76,7 +78,7 @@
         }
       }}
     >
-      {#each items as dockItem}
+      {#each items as dockItem (dockItem.id)}
         <DockItem {containerX} {mouseX}>
           {#if dockItem?.icon}
             <a

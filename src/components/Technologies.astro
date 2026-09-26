@@ -2,8 +2,6 @@
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { TECHNOLOGIES, getTechnology } from "@/data/technologies";
 
-let showAll = false;
-
 const technologies = Object.keys(TECHNOLOGIES) as Array<keyof typeof TECHNOLOGIES>;
 
 const lang = getLangFromUrl(Astro.url);

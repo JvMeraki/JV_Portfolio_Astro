@@ -5,16 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "check": "astro sync && tsc --noEmit",
+    "lint": "eslint .",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/svelte": "^9.0.1",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^11.0.4",
+    "@astrojs/vercel": "^11.0.11",
     "@fontsource/potta-one": "^5.2.5",
     "@fontsource/rampart-one": "^5.2.5",
-    "astro": "^7.1.6",
+    "astro": "^7.3.5",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "lucide-svelte": "^0.510.0",
@@ -23,10 +25,15 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@tailwindcss/postcss": "^4.1.6",
     "@types/node": "^22.15.17",
+    "eslint": "^10.0.0",
+    "eslint-plugin-astro": "^3.0.0",
+    "eslint-plugin-svelte": "^3.0.0",
     "sharp": "^0.34.1",
     "svelte": "^5.28.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.0.0"
   }
 }
