@@ -13,7 +13,7 @@ const t = useTranslations(lang);
     type="button"
     data-theme-btn
     class="flex flex-row items-center gap-1 text-[var(--white-icon)]
-           transition-colors text-xs md:text-base hover:text-[var(--primary)] focus:outline-none"
+           transition-colors text-xs md:text-base hover:text-[var(--primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
     aria-haspopup="true"
     aria-expanded="false"
   >
@@ -36,6 +36,7 @@ const t = useTranslations(lang);
   >
     <li role="none">
       <button
+        type="button"
         role="menuitem"
         data-theme-option="light"
         class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"
@@ -46,6 +47,7 @@ const t = useTranslations(lang);
     </li>
     <li role="none">
       <button
+        type="button"
         role="menuitem"
         data-theme-option="system"
         class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"
@@ -56,6 +58,7 @@ const t = useTranslations(lang);
     </li>
     <li role="none">
       <button
+        type="button"
         role="menuitem"
         data-theme-option="dark"
         class="flex w-full px-4 py-2 text-sm text-[var(--white-icon)] hover:bg-[var(--foreground-subtle-1)] hover:text-[var(--primary)] rounded-md items-center gap-3 text-left"

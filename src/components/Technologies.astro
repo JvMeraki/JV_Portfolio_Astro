@@ -48,6 +48,9 @@ const t = useTranslations(lang);
       ></span>
       <button
         id="toggleBtn"
+        type="button"
+        aria-controls="toolList"
+        aria-expanded="false"
         data-show-label={t("content_tech_button_show")}
         data-hide-label={t("content_tech_button_hide")}
         class="relative inline-flex w-40 h-10 items-center justify-center
@@ -99,6 +102,8 @@ const t = useTranslations(lang);
         list.classList.add("hidden");
         list.classList.remove("grid");
       }
+
+      button.setAttribute("aria-expanded", String(visible));
 
       button.textContent = visible
         ? button.getAttribute("data-hide-label")

@@ -28,7 +28,14 @@ const navItems: NavItem[] = [
     class="fixed left-1/2 -translate-x-1/2 z-[100] bg-[var(--background)] border border-transparent backdrop-blur-xl transition-all duration-500 ease-in-out md:top-6 md:bottom-auto bottom-0 w-[80%] md:w-auto"
   >
     <div class="container mx-auto flex justify-center items-center p-3">
-      <button id="burger" class="md:hidden text-[var(--foreground)]" aria-label="Open menu">
+      <button
+        id="burger"
+        type="button"
+        class="md:hidden text-[var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
+        aria-label="Open menu"
+        aria-controls="nav-list"
+        aria-expanded="false"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -79,17 +86,19 @@ const navItems: NavItem[] = [
     document.addEventListener("DOMContentLoaded", () => {
       const nav = document.getElementById("main-nav") as HTMLElement | null;
       const navList = document.getElementById("nav-list") as HTMLElement | null;
+      const burger = document.getElementById("burger") as HTMLButtonElement | null;
       const navLinks = document.querySelectorAll("nav a[href^='#']");
       const sections = document.querySelectorAll("section[id]");
       let rafId: number | null = null;
       let mainObserver: IntersectionObserver;
       let lastKnownWidth = window.innerWidth;
 
-      if (nav) {
-        nav.addEventListener("click", () => {
-          if (window.innerWidth < 768) {
-            navList?.classList.toggle("hidden");
-          }
+      if (burger && navList) {
+        burger.addEventListener("click", () => {
+          const isOpen = !navList.classList.contains("hidden");
+          navList.classList.toggle("hidden", isOpen);
+          burger.setAttribute("aria-expanded", String(!isOpen));
+          burger.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
         });
       }
 
@@ -105,6 +114,8 @@ const navItems: NavItem[] = [
           }
           if (window.innerWidth < 768 && navList) {
             navList.classList.add("hidden");
+            burger?.setAttribute("aria-expanded", "false");
+            burger?.setAttribute("aria-label", "Open menu");
           }
         });
       });
