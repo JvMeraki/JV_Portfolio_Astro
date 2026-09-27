@@ -1,0 +1,6 @@
+[
+  { "id": "hangeul-type-lab", "title": "Hangeul Type Lab", "url": "https://korean-app-jv.vercel.app", "description": "A visual Korean typing app that guides you as you practice, highlights the keys where you make the most mistakes, and helps both beginners and experienced keyboard users build accuracy." },
+  { "id": "makeup-portfolio", "title": "Portafolio de maquillaje", "url": "https://val-makeup.vercel.app/en/", "description": "A minimalist, professional makeup portfolio from a talented artist, which not only showcases her work but also gives you the opportunity to learn a little about her story." },
+  { "id": "jv-art-gallery", "title": "JV's Art Gallery", "url": "https://jv-art-gallery.vercel.app/en/", "description": "An online gallery that displays portraits made using different techniques" },
+  { "id": "ice-cream-shop", "title": "Ice Cream Shop - Project", "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp", "description": "An online ice cream shop project with its own API, database authentication, and inventory management" }
+]

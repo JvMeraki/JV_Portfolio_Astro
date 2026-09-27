@@ -7,18 +7,12 @@ import Nav from "@/components/Nav.astro";
 import Proyects from "@/components/Proyects.astro";
 import Techs from "@/components/Technologies.astro";
 import Welcome from "@/components/Welcome.astro";
+import { LOCALE_CODES } from "@/i18n/locales";
 import Layout from "@/layouts/Layout.astro";
 import "@/styles/global.css";
 
 export async function getStaticPaths() {
-  return [
-    { params: { lang: "es" } },
-    { params: { lang: "en" } },
-    { params: { lang: "fr" } },
-    { params: { lang: "it" } },
-    { params: { lang: "pt" } },
-    { params: { lang: "kr" } },
-  ];
+  return LOCALE_CODES.map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;

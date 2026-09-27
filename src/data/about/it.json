@@ -1,0 +1,6 @@
+[
+  { "title": "Chi sono?", "description": "Mi chiamo Brayan Javier Martínez Pinzón, uno sviluppatore autodidatta di {age} anni proveniente dalla Colombia 🇨🇴.", "emphasis": "Brayan Javier Martínez Pinzón" },
+  { "title": "Lato creativo", "description": "Sono appassionato di espressione visiva. Il disegno è stato un compagno costante e influenza continuamente il mio approccio al design UI/UX e allo sviluppo frontend con una prospettiva creativa.", "emphasis": "Disegno" },
+  { "title": "Esperienza", "description": "Ho lavorato nello sviluppo RPA per oltre 3 anni. Sebbene l'automazione abbia affinato la mia logica e le mie capacità di progettazione dei processi, ora mi concentro completamente sullo sviluppo web, dove miro a unire conoscenze tecniche e sensibilità al design.", "emphasis": "Sviluppo RPA" },
+  { "title": "Lingue e interessi", "description": "Mi piacciono le lingue e la cultura. Parlo un po' di inglese, italiano, portoghese e francese, e attualmente sto studiando coreano 🇰🇷. I K-drama e il K-pop fanno parte della mia routine quotidiana e mi aiutano a rilassarmi e a restare ispirato." }
+]

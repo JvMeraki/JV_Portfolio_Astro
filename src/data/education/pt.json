@@ -1,0 +1,8 @@
+[
+  { "id": "cun", "entity": "Corporação Unificada Nacional de Educação Superior (CUN)", "date": "2026 - Presente", "title": "Engenharia de Software" },
+  { "id": "los-andes-frontend", "entity": "Universidade dos Andes", "date": "2026", "title": "Diploma em Frontend com HTML, CSS e JavaScript" },
+  { "id": "umb", "entity": "Universidade Manuela Beltrán", "date": "2023 - 2024", "title": "Engenharia de Software" },
+  { "id": "los-andes-backend", "entity": "Universidade dos Andes", "date": "2025", "title": "Diploma em Backend com Python" },
+  { "id": "udistrital", "entity": "Universidade Distrital Francisco José de Caldas", "date": "2023", "title": "Diploma em Desenvolvimento Full Stack Intermediário" },
+  { "id": "utp", "entity": "Universidade Tecnológica de Pereira", "date": "2021", "title": "Diploma em Desenvolvimento de Aplicações Web" }
+]

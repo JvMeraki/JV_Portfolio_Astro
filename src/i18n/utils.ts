@@ -1,4 +1,5 @@
 import { DEFAULTLANG, LABELS } from './ui';
+import { LANGUAGES, type Locale } from './locales';
 
 export function interpolate(
     text: string,
@@ -15,8 +16,8 @@ export function interpolate(
 
 export function getLangFromUrl(url: URL) {
     const [, lang] = url.pathname.split('/');
-    if (lang in LABELS) { 
-        return lang as keyof typeof LABELS
+    if (lang in LANGUAGES) {
+        return lang as Locale;
     };
     return DEFAULTLANG;
 }

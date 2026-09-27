@@ -1,0 +1,6 @@
+[
+  { "id": "inetum", "entity": "Inetum", "order": 1 },
+  { "id": "freelance", "entity": "Freelance", "order": 2 },
+  { "id": "kpmg", "entity": "KPMG Advisory, Tax & Legal", "order": 3 },
+  { "id": "carvajal", "entity": "Carvajal Soluciones de Comunicación", "order": 4 }
+]

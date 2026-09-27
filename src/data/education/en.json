@@ -1,0 +1,8 @@
+[
+  { "id": "cun", "entity": "Corporación Unificada Nacional de Educación Superior (CUN)", "date": "2026 - Present", "title": "Software Engineering" },
+  { "id": "los-andes-frontend", "entity": "Los Andes University", "date": "2026", "title": "Frontend with HTML, CSS, and JavaScript Diploma" },
+  { "id": "umb", "entity": "Manuela Beltrán University", "date": "2023 - 2024", "title": "Software Engineering" },
+  { "id": "los-andes-backend", "entity": "Los Andes University", "date": "2025", "title": "Backend with Python Diploma" },
+  { "id": "udistrital", "entity": "Francisco José de Caldas District University", "date": "2023", "title": "Intermediate Full Stack Development Diploma" },
+  { "id": "utp", "entity": "Technological University of Pereira", "date": "2021", "title": "Web Application Development Diploma" }
+]

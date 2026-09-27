@@ -1,26 +1,17 @@
 ---
 import Card from "@/components/CardExperience.astro";
-import aboutData from "@/data/about.json";
-import educationData from "@/data/education.json";
-import experienceData from "@/data/experience.json";
+import { getAbout } from "@/data/about";
+import { getEducation } from "@/data/education";
+import { getExperience } from "@/data/experience";
 import { getLangFromUrl, useTranslations, interpolate } from "@/i18n/utils";
 import "@/styles/global.css";
-
-function highlight(text: string, emphasis?: string) {
-  if (!emphasis) return text;
-
-  return text.replace(
-    emphasis,
-    `<span class="text-[var(--white-icon)] font-semibold">${emphasis}</span>`
-  );
-}
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const about = aboutData[lang];
-const education = educationData[lang];
-const experience = experienceData[lang];
+const about = getAbout(lang);
+const education = getEducation(lang);
+const experience = getExperience(lang);
 
 const age = calculateAge();
 
@@ -60,11 +51,25 @@ function calculateAge() {
           </h3>
           <p
             class="text-left text-[var(--gray)] text-lg md:text-xl leading-relaxed"
-            set:html={highlight(
-              interpolate(item.description, {age}),
-              item.enphasis
-            )}
-          />
+          >
+            {
+              (() => {
+                const description = interpolate(item.description, { age });
+                const parts = item.emphasis ? description.split(item.emphasis) : [description];
+
+                return parts.map((part, index) => (
+                  <span>
+                    {part}
+                    {item.emphasis && index < parts.length - 1 && (
+                      <strong class="text-[var(--white-icon)] font-semibold">
+                        {item.emphasis}
+                      </strong>
+                    )}
+                  </span>
+                ));
+              })()
+            }
+          </p>
         </div>
       ))
     }

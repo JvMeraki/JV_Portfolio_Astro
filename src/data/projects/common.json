@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hangeul-type-lab",
+    "image": "/_images/hangeul-type-lab.webp",
+    "featured": 1,
+    "technologies": ["svelte", "typeScript", "tailwind"]
+  },
+  {
+    "id": "makeup-portfolio",
+    "image": "/_images/val-makeup.webp",
+    "featured": 2,
+    "technologies": ["astro", "tailwind", "svelte"]
+  },
+  {
+    "id": "jv-art-gallery",
+    "image": "/_images/jvs-art-gallery.webp",
+    "featured": 3,
+    "technologies": ["astro", "tailwind", "react"]
+  },
+  {
+    "id": "ice-cream-shop",
+    "image": "/_images/ice-cream-shop.webp",
+    "featured": 4,
+    "technologies": ["HTML5", "CSS3", "flask", "python", "mysql"]
+  }
+]

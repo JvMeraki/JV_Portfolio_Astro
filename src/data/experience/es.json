@@ -1,0 +1,6 @@
+[
+  { "id": "inetum", "role": "Desarrollador de Software", "date": "Julio 2025 - Presente", "tasks": ["Creación de interfaces web combinando tecnologías como Astro, Svelte y React según sea necesario.", "Comunicar el frontend con entornos backend en Python.", "Documentación de procesos de desarrollo."] },
+  { "id": "freelance", "role": "Desarrollador Web", "date": "Abril 2025 - Junio 2025", "tasks": ["Interfaces eficientes con Astro y SvelteKit.", "Backend con Node.js, Python y SQL.", "Documentación de procesos de desarrollo."] },
+  { "id": "kpmg", "role": "Desarrollador RPA", "date": "Noviembre 2021 - Marzo 2025", "tasks": ["Automatizar y optimizar procesos mediante robótica.", "Identificar, estimar, desarrollar y mantener procesos de automatización low-code para satisfacer necesidades específicas.", "Implementación de aplicaciones low-code, basadas en reglas, robustas y con datos externos."] },
+  { "id": "carvajal", "role": "Aprendiz en Tecnología", "date": "Julio 2017 - Enero 2018", "tasks": ["Soporte técnico en sitio y resolución de incidentes.", "Gestión diaria de respaldos."] }
+]

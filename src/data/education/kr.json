@@ -1,0 +1,8 @@
+[
+  { "id": "cun", "entity": "국립 고등교육 통합 법인 (CUN)", "date": "2026 - 현재", "title": "소프트웨어 공학" },
+  { "id": "los-andes-frontend", "entity": "로스 안데스 대학교", "date": "2026", "title": "HTML, CSS 및 JavaScript 프론트엔드 디플로마" },
+  { "id": "umb", "entity": "마누엘라 벨트란 대학교", "date": "2023 - 2024", "title": "소프트웨어 공학" },
+  { "id": "los-andes-backend", "entity": "로스 안데스 대학교", "date": "2025", "title": "Python 백엔드 디플로마" },
+  { "id": "udistrital", "entity": "프란시스코 호세 데 칼다스 국립 대학교", "date": "2023", "title": "중급 풀스택 개발 디플로마" },
+  { "id": "utp", "entity": "페레이라 공과대학교", "date": "2021", "title": "웹 애플리케이션 개발 디플로마" }
+]

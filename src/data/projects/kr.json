@@ -1,0 +1,6 @@
+[
+  { "id": "hangeul-type-lab", "title": "한글 타자 연습", "url": "https://korean-app-jv.vercel.app", "description": "시각적인 안내를 통해 한국어 타자 연습을 도와주는 앱입니다. 자주 틀리는 키를 알려 주며, 키보드에 익숙한 사용자도 정확도를 높이며 연습할 수 있습니다." },
+  { "id": "makeup-portfolio", "title": "메이크업 포트폴리오", "url": "https://val-makeup.vercel.app/en/", "description": "재능 있는 메이크업 아티스트의 미니멀하고 프로페셔널한 포트폴리오로, 그녀의 작품뿐만 아니라 그녀의 이야기도 엿볼 수 있습니다." },
+  { "id": "jv-art-gallery", "title": "JV의 아트 갤러리", "url": "https://jv-art-gallery.vercel.app/kr/", "description": "다양한 기법으로 제작된 초상화를 전시하는 온라인 갤러리" },
+  { "id": "ice-cream-shop", "title": "아이스크림 가게 - 프로젝트", "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp", "description": "자체 API, 데이터베이스 인증 및 재고 관리를 갖춘 온라인 아이스크림 가게 프로젝트" }
+]

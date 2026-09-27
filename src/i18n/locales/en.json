@@ -1,0 +1,9 @@
+{
+  "nav_home": "Home", "nav_about": "About me", "nav_projects": "Projects", "nav_techs": "Technologies", "nav_gallery": "Drawing gallery",
+  "theme_label": "Theme", "theme_light": "Light", "theme_system": "System", "theme_dark": "Dark",
+  "hero_title": "Welcome to my portfolio", "hero_hello": "Hi, I'm Javier Martinez 🩶", "hero_role1": "Web", "hero_role2": "Developer",
+  "hero_text1": "Qualified, organized, and detail-oriented Web Developer with experience in designing and building PWA and SPA websites using modern frameworks such as", "hero_text_tech1": "Astro", "hero_text_union": "and", "hero_text_tech2": "Sveltekit", "hero_text2": "Proficient in Figma forcreating user-centered UX/UI designs.",
+  "content_about_title": "About Me", "content_experience_title": "Experience", "content_education_title": "Education", "content_projects_title": "Projects", "content_projects_text": "These are some of the projects I have done, mixing", "content_projects_techs": "different technologies", "content_projects_button": "View project", "content_projects_complement1": "...and", "content_projects_complement2": "more",
+  "content_tech_title": "Technologies", "content_tech_button_show": "View all", "content_tech_button_hide": "Hide list", "content_gallery_title": "Drawing Gallery", "content_gallery_subtitle": "About my art", "content_gallery_text1": "If you'd like to learn more about my art, check out my", "content_gallery_url": "art gallery", "content_gallery_text2": "I showcase some of my best works there, and you can also give me your feedback. Don't forget to follow me on", "content_gallery_url2": "Instagram", "content_gallery_text3": "Thank you for your time and have a good life.",
+  "footer_button": "Follow me on:", "footer_build": "Built with", "footer_component": "Components with", "footer_style": "Styled with", "footer_deploy": "Deployed on", "footer_create": "Created by:", "footer_name": "Brayan Javier Martínez Pinzón", "year": "2025"
+}

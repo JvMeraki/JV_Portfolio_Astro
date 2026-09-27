@@ -1,0 +1,9 @@
+{
+  "nav_home": "홈", "nav_about": "소개", "nav_projects": "프로젝트", "nav_techs": "기술", "nav_gallery": "그림 갤러리",
+  "theme_label": "테마", "theme_light": "밝게", "theme_system": "시스템", "theme_dark": "어둡게",
+  "hero_title": "제 포트폴리오에 오신 것을 환영합니다", "hero_hello": "안녕하세요, Javier Martinez 입니다 🩶", "hero_role1": "웹", "hero_role2": "개발자",
+  "hero_text1": "PWA와 SPA 웹사이트를 설계하고 구축한 경험이 있는, 꼼꼼하고 체계적인 웹 개발자입니다. 현대적인 프레임워크를 사용합니다:", "hero_text_tech1": "Astro", "hero_text_union": "그리고", "hero_text_tech2": "Sveltekit", "hero_text2": "사용자 중심 UX/UI 디자인을 만들기 위해 Figma에 능숙합니다.",
+  "content_about_title": "소개", "content_experience_title": "경력", "content_education_title": "학력", "content_projects_title": "프로젝트", "content_projects_text": "제가 만든 몇 가지 프로젝트입니다, 사용된 기술은", "content_projects_techs": "다양한 기술", "content_projects_button": "프로젝트 보기", "content_projects_complement1": "...그리고", "content_projects_complement2": "더 보기",
+  "content_tech_title": "기술", "content_tech_button_show": "모두 보기", "content_tech_button_hide": "목록 숨기기", "content_gallery_title": "그림 갤러리", "content_gallery_subtitle": "내 예술에 대하여", "content_gallery_text1": "제 예술에 대해 더 알고 싶으시면 제", "content_gallery_url": "아트 갤러리", "content_gallery_text2": "여기에서 제 최고의 작품들을 볼 수 있고, 피드백도 남길 수 있습니다. 잊지 말고 저를", "content_gallery_url2": "인스타그램", "content_gallery_text3": "시간 내주셔서 감사합니다. 행복하세요.",
+  "footer_button": "팔로우:", "footer_build": "구축:", "footer_component": "구성 요소:", "footer_style": "스타일:", "footer_deploy": "배포:", "footer_create": "작성자:", "footer_name": "Brayan Javier Martínez Pinzón", "year": "2025"
+}

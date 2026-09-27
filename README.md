@@ -35,8 +35,8 @@
 ├── src/
 │   ├── assets/            # Project-specific assets
 │   ├── components/        # Astro & Svelte UI components
-│   ├── data/              # JSON data (about, education, projects)
-│   ├── i18n/              # Internationalization utilities & dictionaries
+│   ├── data/              # Shared content, localized content and loaders
+│   ├── i18n/              # Locale registry, utilities and UI translations
 │   ├── layouts/           # Page layouts
 │   ├── lib/               # Utility functions
 │   ├── pages/             # Astro pages (including dynamic routes. [lang])
@@ -82,6 +82,27 @@
 
 This portfolio supports multiple languages.  
 Change the language using the picker in the navigation bar.
+
+Locales are registered in `src/i18n/locales.ts`, which is the source used by
+the route generator and language picker. UI labels live in one JSON dictionary
+per language under `src/i18n/locales/`; `ui.ts` provides the typed loader and checks
+that every locale contains the same keys.
+
+Portfolio content follows a different model: shared project metadata lives in
+`src/data/projects/common.json`, while translated titles, descriptions and URLs
+live in one JSON file per language under `src/data/projects/`. The loader checks
+that every language contains the same project IDs and valid technologies before
+the site is built.
+
+About content follows the same per-language structure under `src/data/about/`.
+Its loader validates the required sections before rendering them.
+
+Experience and education use a shared manifest plus one translated JSON file
+per language under `src/data/experience/` and `src/data/education/`. Stable IDs
+keep the entries aligned even when a translation changes.
+
+To add a project, add its technical metadata to `common.json`, add the same ID
+to every locale file, then run `pnpm check` and `pnpm build`.
 
 ---
 

@@ -1,0 +1,8 @@
+[
+  { "id": "cun", "order": 1 },
+  { "id": "los-andes-frontend", "order": 2 },
+  { "id": "umb", "order": 3 },
+  { "id": "los-andes-backend", "order": 4 },
+  { "id": "udistrital", "order": 5 },
+  { "id": "utp", "order": 6 }
+]

@@ -1,0 +1,6 @@
+[
+  { "id": "hangeul-type-lab", "title": "Laboratorio de mecanografía en Hangeul", "url": "https://korean-app-jv.vercel.app", "description": "Una aplicación visual de mecanografía en coreano que te guía durante la práctica, identifica las teclas en las que cometes más errores y ayuda tanto a principiantes como a quienes ya conocen el teclado a mejorar su precisión." },
+  { "id": "makeup-portfolio", "title": "Portafolio de maquillaje", "url": "https://val-makeup.vercel.app/es/", "description": "Un portafolio minimalista y profesional de una talentosa artista de maquillaje que no solo muestra su trabajo, sino que también te permite conocer un poco sobre su historia." },
+  { "id": "jv-art-gallery", "title": "Galería de Arte de JV", "url": "https://jv-art-gallery.vercel.app/es/", "description": "Una galería en línea que muestra retratos realizados con diferentes técnicas" },
+  { "id": "ice-cream-shop", "title": "Heladería - Proyecto", "url": "https://github.com/JvMeraki/PROYECTO3-bmartinezp", "description": "Un proyecto de heladería en línea con su propia API, autenticación de base de datos y gestión de inventario" }
+]
